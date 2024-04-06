@@ -50,16 +50,16 @@
 
 <body>
 	<!-- preloader start -->
-	<div class="loader" id="preloader">
-		<div class="preloader-wrap">
-			<div class="plane">
-				<img class="plane-img" src="assets/images/loader/loader-plane.png" alt="" />
-			</div>
-			<div class="earth-wrapper">
-				<div class="earth" data-background="assets/images/loader/earth.gif"></div>
-			</div>
-		</div>
-	</div>
+<!--	<div class="loader" id="preloader">-->
+<!--		<div class="preloader-wrap">-->
+<!--			<div class="plane">-->
+<!--				<img class="plane-img" src="assets/images/loader/loader-plane.png" alt="" />-->
+<!--			</div>-->
+<!--			<div class="earth-wrapper">-->
+<!--				<div class="earth" data-background="assets/images/loader/earth.gif"></div>-->
+<!--			</div>-->
+<!--		</div>-->
+<!--	</div>-->
 	<!-- preloader end -->
 
 	<!-- Offcanvas area start -->
@@ -83,18 +83,12 @@
 							</button>
 						</div>
 					</div>
-					<div class="offcanvas-search mb-0">
-						<form action={'#'}>
-							<input type="text" name="offcanvasSearch" placeholder="Search here" />
-							<button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-						</form>
-					</div>
+
 					<div class="mobile-menu fix mb-25"></div>
 					<div class="offcanvas-about d-none d-lg-block mb-25">
-						<h4 class="offcanvas-title-meta">About Tourigo</h4>
+						<h4 class="offcanvas-title-meta">About Namaste Bali Trans</h4>
 						<p>
-							Explore stunning destinations and create immersive travel experiences that inspire
-							wanderlust and captivate your audience from the start.
+							Namaste Bali Trans offers more than just transportation; we provide immersive journeys into the heart of Bali's culture and beauty. With our team of knowledgeable guides and comfortable vehicles, we ensure that every excursion is not just a trip, but an unforgettable experience. From exploring ancient temples to indulging in authentic Balinese cuisine, let us be your trusted companion in discovering the wonders of Bali.
 						</p>
 					</div>
 					<div class="offcanvas-contact mb-25">
@@ -136,13 +130,7 @@
 							</li>
 						</ul>
 					</div>
-					<div class="offcanvas-btn mb-25">
-						<h4 class="offcanvas-title-meta">Account</h4>
-						<div class="header-btn-wrap gap-10">
-							<a class="bd-btn btn-style text-btn" href="login.html">Log In</a>
-							<a class="bd-btn btn-style text-btn" href="contact.html">Get Started</a>
-						</div>
-					</div>
+
 					<div class="offcanvas-social">
 						<h4 class="offcanvas-title-meta">Subscribe & Follow</h4>
 						<ul>
@@ -168,16 +156,11 @@
 					<div class="header-main">
 						<div class="header-left">
 							<div class="header-logo">
-								<a href="index-2.html"
+								<a href="/"
 									><img src="assets/images/logo/logo-black.svg" alt="logo not found" /></a
 								>
 							</div>
-							<div class="header-search mb-0">
-								<form action={'#'}>
-									<input type="text" placeholder="Search Destinations" />
-									<button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-								</form>
-							</div>
+
 						</div>
 						<div class="header-right">
 							<div class="header-action d-flex align-items-center">
@@ -185,272 +168,12 @@
 									<div class="main-menu">
 										<nav class="main-menu main-menu-three" id="mobile-menu">
 											<ul>
-												<li class="has-mega-menu">
-													<a href="index-2.html">Home</a>
-													<ul class="mega-menu home-menu-grid">
-														<li>
-															<div class="home-menu-item">
-																<div class="home-menu-thumb">
-																	<img
-																		src="assets/images/menu/menu-home-1.jpg"
-																		alt="thumb not found"
-																	/>
-																	<div class="home-menu-buttons">
-																		<a href="home.html" class="bd-primary-btn btn-style">
-																			<span class="bd-primary-btn-text">Home One</span>
-																			<span class="bd-primary-btn-circle"></span>
-																		</a>
-																	</div>
-																</div>
-															</div>
-														</li>
-														<li>
-															<div class="home-menu-item">
-																<div class="home-menu-thumb">
-																	<img
-																		src="assets/images/menu/menu-home-2.jpg"
-																		alt="thumb not found"
-																	/>
-																	<div class="home-menu-buttons">
-																		<a href="home-two.html" class="bd-primary-btn btn-style">
-																			<span class="bd-primary-btn-text">Home Two</span>
-																			<span class="bd-primary-btn-circle"></span>
-																		</a>
-																	</div>
-																</div>
-															</div>
-														</li>
-														<li>
-															<div class="home-menu-item">
-																<div class="home-menu-thumb">
-																	<img
-																		src="assets/images/menu/menu-home-3.jpg"
-																		alt="thumb not found"
-																	/>
-																	<div class="home-menu-buttons">
-																		<a href="home-three.html" class="bd-primary-btn btn-style">
-																			<span class="bd-primary-btn-text">Home Three</span>
-																			<span class="bd-primary-btn-circle"></span>
-																		</a>
-																	</div>
-																</div>
-															</div>
-														</li>
-														<li>
-															<div class="home-menu-item">
-																<div class="home-menu-thumb">
-																	<img
-																		src="assets/images/menu/menu-home-4.jpg"
-																		alt="thumb not found"
-																	/>
-																	<div class="home-menu-buttons">
-																		<a href="home-four.html" class="bd-primary-btn btn-style">
-																			<span class="bd-primary-btn-text">Home Four</span>
-																			<span class="bd-primary-btn-circle"></span>
-																		</a>
-																	</div>
-																</div>
-															</div>
-														</li>
-														<li>
-															<div class="home-menu-item">
-																<div class="home-menu-thumb">
-																	<img
-																		src="assets/images/menu/menu-home-5.jpg"
-																		alt="thumb not found"
-																	/>
-																	<div class="home-menu-buttons">
-																		<a href="home-five.html" class="bd-primary-btn btn-style">
-																			<span class="bd-primary-btn-text">Home Five</span>
-																			<span class="bd-primary-btn-circle"></span>
-																		</a>
-																	</div>
-																</div>
-															</div>
-														</li>
-													</ul>
-												</li>
-												<li class="menu-item-has-children">
-													<a href={'#'}>Tour</a>
-													<ul class="submenu">
-														<li class="menu-item-has-children has-arrow">
-															<a href={'#'}>Tour Listing</a>
-															<ul class="submenu">
-																<li><a href="tour-listing.html">Tour Listing Search</a></li>
-																<li><a href="tour-listing-two.html">Tour Listing Search 2</a></li>
-																<li><a href="tour-listing-three.html">Tour Listing Sidebar</a></li>
-																<li>
-																	<a href="tour-listing-four.html">Tour Listing Full width</a>
-																</li>
-																<li><a href="tour-listing-five.html">Tour Listing Video</a></li>
-																<li><a href="tour-listing-six.html">Tour Listing Banner</a></li>
-															</ul>
-														</li>
-														<li class="menu-item-has-children has-arrow">
-															<a href={'#'}>Tour Grid</a>
-															<ul class="submenu">
-																<li><a href="tour-grid.html">No Sidebar</a></li>
-																<li><a href="tour-grid-right.html">Right Sidebar</a></li>
-																<li><a href="tour-grid-left.html">Left Sidebar</a></li>
-															</ul>
-														</li>
-														<li class="menu-item-has-children has-arrow">
-															<a href="tour.html">Tour Details</a>
-															<ul class="submenu">
-																<li><a href="tour-details.html">No Sidebar</a></li>
-																<li><a href="tour-details-right.html">Right Sidebar</a></li>
-																<li><a href="tour-details-left.html">Left Sidebar</a></li>
-															</ul>
-														</li>
-													</ul>
-												</li>
-												<li class="menu-item-has-children">
-													<a href={'#'}>Destination</a>
-													<ul class="submenu">
-														<li class="menu-item-has-children has-arrow">
-															<a href={'#'}>Destination Grid</a>
-															<ul class="submenu">
-																<li><a href="destinations-grid.html">No Sidebar</a></li>
-																<li><a href="destinations-grid-right.html">Right Sidebar</a></li>
-																<li><a href="destinations-grid-left.html">Left Sidebar</a></li>
-															</ul>
-														</li>
-														<li class="menu-item-has-children has-arrow">
-															<a href={'#'}>Destination Details</a>
-															<ul class="submenu">
-																<li><a href="destinations-details.html">No Sidebar</a></li>
-																<li><a href="destinations-details-right.html">Right Sidebar</a></li>
-																<li><a href="destinations-details-left.html">Left Sidebar</a></li>
-															</ul>
-														</li>
-													</ul>
-												</li>
-												<!-- page menu -->
-												<li class="has-mega-menu">
-													<a href={'#'}>Pages</a>
-													<ul class="mega-menu mega-grid-4">
-														<li>
-															<a href="javasript:void(0);" class="title">Page Layout 1</a>
-															<ul>
-																<li><a href="about.html">About Us</a></li>
-																<li><a href="booking.html">Booking Form</a></li>
-																<li><a href="pricing.html">Pricing</a></li>
-																<li><a href="faq.html">Faq</a></li>
-																<li><a href="contact.html">Contact</a></li>
-															</ul>
-														</li>
-														<li>
-															<a href="javasript:void(0);" class="title">Page Layout 2</a>
-															<ul>
-																<li><a href="team.html">Team</a></li>
-																<li><a href="team-details.html">Team Details</a></li>
-																<li><a href="error-page.html">Error Page</a></li>
-																<li><a href="privacy-policy.html">Privacy & Policy</a></li>
-																<li><a href="terms-conditions.html">Terms and Conditions</a></li>
-															</ul>
-														</li>
-														<li>
-															<a href="javasript:void(0);" class="title">Page Layout 3</a>
-															<ul>
-																<li><a href="sign-in.html">Login</a></li>
-																<li><a href="sign-up.html">Register</a></li>
-																<li><a href="forgot.html">Forgot Password</a></li>
-																<li><a href="otp.html">OTP</a></li>
-															</ul>
-														</li>
-														<li>
-															<a href="javasript:void(0);" class="title">Page Layout 4</a>
-															<ul>
-																<li><a href="shop.html">Shop</a></li>
-																<li><a href="shop-v2.html">Shop V2</a></li>
-																<li><a href="shop-details.html">Shop Details</a></li>
-																<li><a href="checkout.html">Checkout</a></li>
-																<li><a href="cart.html">Cart</a></li>
-																<li><a href="wishlist.html">Wishlist</a></li>
-																<li><a href="order.html">Order Confirm</a></li>
-															</ul>
-														</li>
-													</ul>
-												</li>
-												<!-- elements menu -->
-												<li class="has-mega-menu">
-													<a href={'#'}>Elements</a>
-													<ul class="mega-menu mega-grid-4">
-														<li>
-															<a href="javasript:void(0);" class="title">elements Layout 1</a>
-															<ul>
-																<li><a href="style-guide.html">Style Guide</a></li>
-																<li><a href="elements-accordion.html">Accordion</a></li>
-																<li><a href="elements-about.html">About Us</a></li>
-																<li><a href="elements-advancetab.html">Advance Tab</a></li>
-																<li><a href="elements-blog.html">Blog</a></li>
-																<li><a href="elements-brand.html">Brand</a></li>
-															</ul>
-														</li>
-														<li>
-															<a href="javasript:void(0);" class="title">elements Layout 2</a>
-															<ul>
-																<li><a href="elements-breadcrumb.html">Breadcrumb</a></li>
-																<li><a href="elements-button.html">Button</a></li>
-																<li><a href="elements-cta.html">Call To Action</a></li>
-																<li><a href="elements-counter.html">Counter</a></li>
-																<li><a href="elements-destinations.html">Destinations</a></li>
-																<li><a href="elements-form.html">Form</a></li>
-															</ul>
-														</li>
-														<li>
-															<a href="javasript:void(0);" class="title">elements Layout 3</a>
-															<ul>
-																<li><a href="elements-footer.html">Footer Style</a></li>
-																<li><a href="elements-card.html">Image Card</a></li>
-																<li><a href="elements-icomoon.html">Icomoon Fonts Icon</a></li>
-																<li><a href="elements-our-offers.html">Offers</a></li>
-																<li><a href="elements-pricing.html">Pricing</a></li>
-																<li><a href="elements-social.html">Social Share</a></li>
-															</ul>
-														</li>
-														<li>
-															<a href="javasript:void(0);" class="title">elements Layout 4</a>
-															<ul>
-																<li><a href="elements-team.html">Team</a></li>
-																<li><a href="elements-testimonial.html">Testimonial</a></li>
-																<li><a href="elements-tour.html">Tour</a></li>
-																<li><a href="elements-why-chose.html">Why Chose Us</a></li>
-																<li><a href={'#'}>More Coming</a></li>
-															</ul>
-														</li>
-													</ul>
-												</li>
-												<li class="menu-item-has-children">
-													<a href={'#'}>Blog</a>
-													<ul class="submenu last-children">
-														<li class="menu-item-has-children has-arrow">
-															<a href={'#'}>Blog List</a>
-															<ul class="submenu">
-																<li><a href="blog-list.html">No Sidebar</a></li>
-																<li><a href="blog-list-right.html">Right Sidebar</a></li>
-																<li><a href="blog-list-left.html">Left Sidebar</a></li>
-															</ul>
-														</li>
-														<li class="menu-item-has-children has-arrow">
-															<a href={'#'}>Blog Grid</a>
-															<ul class="submenu">
-																<li><a href="blog-grid.html">Blog Grid</a></li>
-																<li><a href="blog-grid-right.html">Blog Grid Right</a></li>
-																<li><a href="blog-grid-left.html">Blog Grid Left</a></li>
-															</ul>
-														</li>
-														<li class="menu-item-has-children has-arrow">
-															<a href={'#'}>Blog Details</a>
-															<ul class="submenu">
-																<li><a href="blog-details.html">No Sidebar</a></li>
-																<li><a href="blog-details-right.html">Right sidebar</a></li>
-																<li><a href="blog-details-left.html">Left sidebar</a></li>
-															</ul>
-														</li>
-													</ul>
-												</li>
-												<li><a href="contact.html">Contact</a></li>
+
+												<li><a href="{'#'}">Home</a></li>
+												<li><a href="{'#'}">Why Choose Us</a></li>
+												<li><a href="{'#'}">Destinations</a></li>
+												<li><a href="{'#'}">Your Plan</a></li>
+												<li><a href="{'#'}">Contact Us</a></li>
 											</ul>
 										</nav>
 									</div>
@@ -509,8 +232,7 @@
 							</div>
 							<div class="footer-widget-content">
 								<p>
-									Welcome to Tourigo, your gateway to unforgettable adventures and immersive travel
-									experiences. Explore with us and let your journey begin!
+									Step into a world of unforgettable adventures with Namaste Bali Trans! Get ready to immerse yourself in the vibrant culture, breathtaking landscapes, and hidden gems of Bali. Whether you're seeking ancient temples, pristine beaches, or mouthwatering cuisine, our expert guides and comfortable transportation are here to make your Bali experience truly extraordinary. Let's embark on an adventure you'll never forget!
 								</p>
 								<div class="d-flex flex-wrap align-items-center gap--5">
 									<span class="b6">Follow Us:</span>
@@ -611,8 +333,8 @@
 					<div class="col-xl-4 col-lg-6 col-md-6 col-12">
 						<div class="footer-copyright underline">
 							<p>
-								Copyright @ 2024 <a href="https://themeforest.net/user/bdevs" target="_blank"
-									>Tourigo</a
+								Copyright @ {new Date().getFullYear()} <a href="{'#'}" target="_blank"
+									>Namaste Bali Trans</a
 								> . All Right Reserved
 							</p>
 						</div>
