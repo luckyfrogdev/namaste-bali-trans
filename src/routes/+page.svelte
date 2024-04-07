@@ -406,23 +406,21 @@
 			<div class="col-xl-3 col-lg-4 col-md-4">
 				<div class="activity-wrapper activity-style-two">
 					<div class="activity-thumb image-overly">
-						<a href={'#'}><img src="assets/images/activity/activity-img-5.png" alt="image" /></a>
+						<a href={'#'}><img src="assets/images/activity/swing.png" alt="Swing in Bali" /></a>
 					</div>
 					<div class="activity-content">
 						<div class="activity-title-wrap">
-							<h5 class="activity-title underline-two"><a href={'#'}>City Tours</a></h5>
-							<p>100+ Tours</p>
+							<h5 class="activity-title underline-two"><a href={'#'}>Swing</a></h5>
 						</div>
 					</div>
 				</div>
 				<div class="activity-wrapper activity-style-two">
 					<div class="activity-thumb image-overly">
-						<a href={'#'}><img src="assets/images/activity/activity-img-6.png" alt="image" /></a>
+						<a href={'#'}><img src="assets/images/activity/snorkeling.png" alt="Snorkeling in Bali" /></a>
 					</div>
 					<div class="activity-content">
 						<div class="activity-title-wrap">
-							<h5 class="activity-title underline-two"><a href={'#'}>Mountain Tours</a></h5>
-							<p>100+ Tours</p>
+							<h5 class="activity-title underline-two"><a href={'#'}>Snorkeling</a></h5>
 						</div>
 					</div>
 				</div>
@@ -430,12 +428,11 @@
 			<div class="col-xl-6 col-lg-8 col-md-8">
 				<div class="activity-wrapper activity-style-two">
 					<div class="activity-thumb image-overly">
-						<a href={'#'}><img src="assets/images/activity/activity-img-7.png" alt="image" /></a>
+						<a href={'#'}><img src="assets/images/activity/rafting-bali.png" alt="Rafting in Bali" /></a>
 					</div>
 					<div class="activity-content">
 						<div class="activity-title-wrap">
-							<h5 class="activity-title underline-two"><a href={'#'}>Mountain Everest Tours</a></h5>
-							<p>100+ Tours</p>
+							<h5 class="activity-title underline-two"><a href={'#'}>Rafting</a></h5>
 						</div>
 					</div>
 				</div>
@@ -443,13 +440,12 @@
 					<div class="col-xl-6 col-lg-6 col-md-6">
 						<div class="activity-wrapper activity-style-two">
 							<div class="activity-thumb image-overly">
-								<a href={'#'}><img src="assets/images/activity/activity-img-8.png" alt="image" /></a
+								<a href={'#'}><img src="assets/images/activity/watersport.png" alt="Watersport in Bali" /></a
 								>
 							</div>
 							<div class="activity-content">
 								<div class="activity-title-wrap">
-									<h5 class="activity-title underline-two"><a href={'#'}>See Tours</a></h5>
-									<p>100+ Tours</p>
+									<h5 class="activity-title underline-two"><a href={'#'}>Watersport</a></h5>
 								</div>
 							</div>
 						</div>
@@ -457,13 +453,12 @@
 					<div class="col-xl-6 col-lg-6 col-md-6">
 						<div class="activity-wrapper activity-style-two">
 							<div class="activity-thumb image-overly">
-								<a href={'#'}><img src="assets/images/activity/activity-img-9.png" alt="image" /></a
+								<a href={'#'}><img src="assets/images/activity/kecak.png" alt="Kecak Dance in Bali" /></a
 								>
 							</div>
 							<div class="activity-content">
 								<div class="activity-title-wrap">
-									<h5 class="activity-title underline-two"><a href={'#'}>Beach Tours</a></h5>
-									<p>100+ Tours</p>
+									<h5 class="activity-title underline-two"><a href={'#'}>Kecak Dance</a></h5>
 								</div>
 							</div>
 						</div>
@@ -473,13 +468,12 @@
 			<div class="col-xl-3 col-lg-6 col-md-12">
 				<div class="activity-wrapper activity-style-two">
 					<div class="activity-thumb image-overly">
-						<a href={'#'}><img src="assets/images/activity/activity-img-10.png" alt="image" /></a
+						<a href={'#'}><img src="assets/images/activity/atv.png" alt="ATV Ride in Bali" /></a
 						>
 					</div>
 					<div class="activity-content">
 						<div class="activity-title-wrap">
-							<h5 class="activity-title underline-two"><a href={'#'}>Beach Tours</a></h5>
-							<p>100+ Tours</p>
+							<h5 class="activity-title underline-two"><a href={'#'}>ATV Ride</a></h5>
 						</div>
 					</div>
 				</div>
