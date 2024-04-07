@@ -1,4 +1,3 @@
-
 <script>
 	import { onMount } from 'svelte';
 
@@ -60,16 +59,16 @@
 
 <body>
 	<!-- preloader start -->
-<!--	<div class="loader" id="preloader">-->
-<!--		<div class="preloader-wrap">-->
-<!--			<div class="plane">-->
-<!--				<img class="plane-img" src="assets/images/loader/loader-plane.png" alt="" />-->
-<!--			</div>-->
-<!--			<div class="earth-wrapper">-->
-<!--				<div class="earth" data-background="assets/images/loader/earth.gif"></div>-->
-<!--			</div>-->
-<!--		</div>-->
-<!--	</div>-->
+	<!--	<div class="loader" id="preloader">-->
+	<!--		<div class="preloader-wrap">-->
+	<!--			<div class="plane">-->
+	<!--				<img class="plane-img" src="assets/images/loader/loader-plane.png" alt="" />-->
+	<!--			</div>-->
+	<!--			<div class="earth-wrapper">-->
+	<!--				<div class="earth" data-background="assets/images/loader/earth.gif"></div>-->
+	<!--			</div>-->
+	<!--		</div>-->
+	<!--	</div>-->
 	<!-- preloader end -->
 
 	<!-- Offcanvas area start -->
@@ -98,7 +97,11 @@
 					<div class="offcanvas-about d-none d-lg-block mb-25">
 						<h4 class="offcanvas-title-meta">About Namaste Bali Trans</h4>
 						<p>
-							Namaste Bali Trans offers more than just transportation; we provide immersive journeys into the heart of Bali's culture and beauty. With our team of knowledgeable guides and comfortable vehicles, we ensure that every excursion is not just a trip, but an unforgettable experience. From exploring ancient temples to indulging in authentic Balinese cuisine, let us be your trusted companion in discovering the wonders of Bali.
+							Namaste Bali Trans offers more than just transportation; we provide immersive journeys
+							into the heart of Bali's culture and beauty. With our team of knowledgeable guides and
+							comfortable vehicles, we ensure that every excursion is not just a trip, but an
+							unforgettable experience. From exploring ancient temples to indulging in authentic
+							Balinese cuisine, let us be your trusted companion in discovering the wonders of Bali.
 						</p>
 					</div>
 					<div class="offcanvas-contact mb-25">
@@ -166,11 +169,8 @@
 					<div class="header-main">
 						<div class="header-left">
 							<div class="header-logo">
-								<a href="/"
-									><img src="assets/images/logo/logo-black.svg" alt="logo not found" /></a
-								>
+								<a href="/"><img src="assets/images/logo/logo-black.svg" alt="logo not found" /></a>
 							</div>
-
 						</div>
 						<div class="header-right">
 							<div class="header-action d-flex align-items-center">
@@ -178,13 +178,16 @@
 									<div class="main-menu">
 										<nav class="main-menu main-menu-three" id="mobile-menu">
 											<ul>
-
-												<li><a href="{'#'}">Home</a></li>
-												<li><a href="{'#why-choose-us'}" on:click|preventDefault={scrollIntoView}>Why Choose Us</a></li>
-												<li><a href="{'#destinations'}">Destinations</a></li>
-												<li><a href="{'#things-to-do'}">Things To Do</a></li>
-												<li><a href="{'#'}">Your Plan</a></li>
-												<li><a href="{'#'}">Contact Us</a></li>
+												<li><a href={'#'}>Home</a></li>
+												<li>
+													<a href={'#why-choose-us'} on:click|preventDefault={scrollIntoView}
+														>Why Choose Us</a
+													>
+												</li>
+												<li><a href={'#destinations'}>Destinations</a></li>
+												<li><a href={'#things-to-do'}>Things To Do</a></li>
+												<li><a href={'#'}>Your Plan</a></li>
+												<li><a href={'#'}>Contact Us</a></li>
 											</ul>
 										</nav>
 									</div>
@@ -237,13 +240,18 @@
 					<div class="col-xl-3 col-lg-3 col-sm-6">
 						<div class="footer-widget footer-2-col-1">
 							<div class="footer-widget-logo mb-40">
-								<a href="{'#'}">
+								<a href={'#'}>
 									<img src="assets/images/logo/logo-black.svg" alt="logo not found" />
 								</a>
 							</div>
 							<div class="footer-widget-content">
 								<p>
-									Step into a world of unforgettable adventures with Namaste Bali Trans! Get ready to immerse yourself in the vibrant culture, breathtaking landscapes, and hidden gems of Bali. Whether you're seeking ancient temples, pristine beaches, or mouthwatering cuisine, our expert guides and comfortable transportation are here to make your Bali experience truly extraordinary. Let's embark on an adventure you'll never forget!
+									Step into a world of unforgettable adventures with Namaste Bali Trans! Get ready
+									to immerse yourself in the vibrant culture, breathtaking landscapes, and hidden
+									gems of Bali. Whether you're seeking ancient temples, pristine beaches, or
+									mouthwatering cuisine, our expert guides and comfortable transportation are here
+									to make your Bali experience truly extraordinary. Let's embark on an adventure
+									you'll never forget!
 								</p>
 								<div class="d-flex flex-wrap align-items-center gap--5">
 									<span class="b6">Follow Us:</span>
@@ -298,9 +306,8 @@
 					<div class="col-xl-4 col-lg-6 col-md-6 col-12">
 						<div class="footer-copyright underline">
 							<p>
-								Copyright @ {new Date().getFullYear()} <a href="{'#'}" target="_blank"
-									>Namaste Bali Trans</a
-								> . All Right Reserved
+								Copyright @ {new Date().getFullYear()}
+								<a href={'#'} target="_blank">Namaste Bali Trans</a> . All Right Reserved
 							</p>
 						</div>
 					</div>
@@ -329,5 +336,4 @@
 		</svg>
 	</div>
 	<!-- Backtotop end -->
-
 </body>

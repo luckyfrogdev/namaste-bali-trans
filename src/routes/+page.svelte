@@ -1,98 +1,93 @@
 <script>
 	let destinations = [
 		{
-			"id": 1,
-			"name": "Lempuyang Temple",
-			"image": "assets/images/tour/lempuyang.png",
-			"tagline": "Gateway to the Divine: Mount Lempuyang's Mystical Portal"
+			id: 1,
+			name: 'Lempuyang Temple',
+			image: 'assets/images/tour/lempuyang.png',
+			tagline: "Gateway to the Divine: Mount Lempuyang's Mystical Portal"
 		},
 		{
-			"id": 2,
-			"name": "Tirta Gangga",
-			"image": "assets/images/tour/tirta-gangga.png",
-			"tagline": "Tranquil Waters, Serene Sanctuary"
+			id: 2,
+			name: 'Tirta Gangga',
+			image: 'assets/images/tour/tirta-gangga.png',
+			tagline: 'Tranquil Waters, Serene Sanctuary'
 		},
 		{
-			"id": 3,
-			"name": "Ulun Danu Beratan Temple",
-			"image": "assets/images/tour/ulun-danu.png",
-			"tagline": "Serenity Upon the Lake's Reflections"
+			id: 3,
+			name: 'Ulun Danu Beratan Temple',
+			image: 'assets/images/tour/ulun-danu.png',
+			tagline: "Serenity Upon the Lake's Reflections"
 		},
 		{
-			"id": 4,
-			"name": "Tanah Lot Temple",
-			"image": "assets/images/tour/tanah-lot.png",
-			"tagline": "Where Land and Sea Converge in Harmony"
+			id: 4,
+			name: 'Tanah Lot Temple',
+			image: 'assets/images/tour/tanah-lot.png',
+			tagline: 'Where Land and Sea Converge in Harmony'
 		},
 		{
-			"id": 5,
-			"name": "Kintamani",
-			"image": "assets/images/tour/kintamani.png",
-			"tagline": "Majestic Vistas, Volcanic Wonders"
+			id: 5,
+			name: 'Kintamani',
+			image: 'assets/images/tour/kintamani.png',
+			tagline: 'Majestic Vistas, Volcanic Wonders'
 		},
 		{
-			"id": 6,
-			"name": "Mount Batur",
-			"image": "assets/images/tour/mount-batur.png",
-			"tagline": "Ascend to Bali's Sacred Summit"
+			id: 6,
+			name: 'Mount Batur',
+			image: 'assets/images/tour/mount-batur.png',
+			tagline: "Ascend to Bali's Sacred Summit"
 		},
 		{
-			"id": 7,
-			"name": "Uluwatu Temple",
-			"image": "assets/images/tour/uluwatu.png",
-			"tagline": "Perched on Cliffs, Bathed in Sunsets"
+			id: 7,
+			name: 'Uluwatu Temple',
+			image: 'assets/images/tour/uluwatu.png',
+			tagline: 'Perched on Cliffs, Bathed in Sunsets'
 		},
 		{
-			"id": 8,
-			"name": "Ubud Monkey Forest",
-			"image": "assets/images/tour/monkey-forest.png",
-			"tagline": "Where Humans Meet Their Mischievous Cousins"
+			id: 8,
+			name: 'Ubud Monkey Forest',
+			image: 'assets/images/tour/monkey-forest.png',
+			tagline: 'Where Humans Meet Their Mischievous Cousins'
 		},
 		{
-			"id": 9,
-			"name": "Penglipuran Village",
-			"image": "assets/images/tour/penglipuran.png",
-			"tagline": "Timeless Charm, Traditional Elegance"
+			id: 9,
+			name: 'Penglipuran Village',
+			image: 'assets/images/tour/penglipuran.png',
+			tagline: 'Timeless Charm, Traditional Elegance'
 		},
 		{
-			"id": 10,
-			"name": "Tegalalang Rice Terrace",
-			"image": "assets/images/tour/tegalalang.png",
-			"tagline": "Nature's Canvas, Bali's Tapestry"
+			id: 10,
+			name: 'Tegalalang Rice Terrace',
+			image: 'assets/images/tour/tegalalang.png',
+			tagline: "Nature's Canvas, Bali's Tapestry"
 		}
 	];
 	let popular_destinations = [
-
-
 		{
-			"id": 1,
-			"name": "Tanah Lot Temple",
-			"image": "assets/images/tour/tanah-lot.png",
-			"tagline": "Where Land and Sea Converge in Harmony"
+			id: 1,
+			name: 'Tanah Lot Temple',
+			image: 'assets/images/tour/tanah-lot.png',
+			tagline: 'Where Land and Sea Converge in Harmony'
 		},
 		{
-			"id": 2,
-			"name": "Kintamani",
-			"image": "assets/images/tour/kintamani.png",
-			"tagline": "Majestic Vistas, Volcanic Wonders"
+			id: 2,
+			name: 'Kintamani',
+			image: 'assets/images/tour/kintamani.png',
+			tagline: 'Majestic Vistas, Volcanic Wonders'
 		},
 		{
-			"id": 3,
-			"name": "Ubud Monkey Forest",
-			"image": "assets/images/tour/monkey-forest.png",
-			"tagline": "Where Humans Meet Their Mischievous Cousins"
+			id: 3,
+			name: 'Ubud Monkey Forest',
+			image: 'assets/images/tour/monkey-forest.png',
+			tagline: 'Where Humans Meet Their Mischievous Cousins'
 		},
 		{
-			"id": 4,
-			"name": "Penglipuran Village",
-			"image": "assets/images/tour/penglipuran.png",
-			"tagline": "Timeless Charm, Traditional Elegance"
-		},
-
+			id: 4,
+			name: 'Penglipuran Village',
+			image: 'assets/images/tour/penglipuran.png',
+			tagline: 'Timeless Charm, Traditional Elegance'
+		}
 	];
-
 </script>
-
 
 <svelte:head>
 	<title>Namaste Bali Trans</title>
@@ -101,32 +96,29 @@
 
 <!-- Banner area start -->
 <section class="bd-banner-area banner-style-two banner-slider-mask">
-<!--	-->
+	<!--	-->
 	<div class="swiper banner-two-active p-relative">
 		<div class="swiper-wrapper">
 			<div class="swiper-slide">
 				<div class="banner-slider-wrapper">
-					<div
-						class="banner-two-image"
-						data-background="assets/images/banner/tanah-lot.png"
-					></div>
+					<div class="banner-two-image" data-background="assets/images/banner/tanah-lot.png"></div>
 					<div class="container">
 						<div class="row justify-content-center">
 							<div class="col-xxl-9 col-xl-9 col-lg-10">
 								<div class="banner-two-content">
 									<h1 class="banner-title medium fw-7 mb-20 white-text">
 										Embrace the Elements: <span class="yellow-shape"
-									>Tanah Lot's <img
-										src="assets/images/shapes/yellow-shape.png"
-										alt="yellow-shape"
-									/></span
-									> Voyage
-
+											>Tanah Lot's <img
+												src="assets/images/shapes/yellow-shape.png"
+												alt="yellow-shape"
+											/></span
+										> Voyage
 									</h1>
 									<p class="banner-description mb-20">
-										Discover the allure of Tanah Lot, where nature and spirituality converge in a mesmerizing embrace. Embark on a picturesque journey for two, crafting timeless memories amidst Bali's coastal wonders.
+										Discover the allure of Tanah Lot, where nature and spirituality converge in a
+										mesmerizing embrace. Embark on a picturesque journey for two, crafting timeless
+										memories amidst Bali's coastal wonders.
 									</p>
-
 								</div>
 							</div>
 						</div>
@@ -135,27 +127,24 @@
 			</div>
 			<div class="swiper-slide">
 				<div class="banner-slider-wrapper">
-					<div
-						class="banner-two-image"
-						data-background="assets/images/banner/kecak.png"
-					></div>
+					<div class="banner-two-image" data-background="assets/images/banner/kecak.png"></div>
 					<div class="container">
 						<div class="row justify-content-center">
 							<div class="col-xxl-9 col-xl-9 col-lg-10">
 								<div class="banner-two-content">
 									<h1 class="banner-title medium fw-7 mb-20 white-text">
 										Kecak Dance: <span class="yellow-shape"
-										>A Rhythmic <img
-											src="assets/images/shapes/yellow-shape.png"
-											alt="yellow-shape"
-										/></span
+											>A Rhythmic <img
+												src="assets/images/shapes/yellow-shape.png"
+												alt="yellow-shape"
+											/></span
 										> Tapestry of Balinese Culture
-
 									</h1>
 									<p class="banner-description mb-20">
-										Dive into the enchantment of the Kecak Dance, where ancient myths and rhythmic chants intertwine, offering a captivating glimpse into Balinese culture and tradition.
+										Dive into the enchantment of the Kecak Dance, where ancient myths and rhythmic
+										chants intertwine, offering a captivating glimpse into Balinese culture and
+										tradition.
 									</p>
-
 								</div>
 							</div>
 						</div>
@@ -174,14 +163,17 @@
 								<div class="banner-two-content">
 									<h1 class="banner-title medium fw-7 mb-20 white-text">
 										Kelingking Beach: <span class="yellow-shape"
-									>Nature's <img
-										src="assets/images/shapes/yellow-shape.png"
-										alt="yellow-shape"
-									/></span
-									> Majestic Tapestry Unveiled
+											>Nature's <img
+												src="assets/images/shapes/yellow-shape.png"
+												alt="yellow-shape"
+											/></span
+										> Majestic Tapestry Unveiled
 									</h1>
 									<p class="banner-description mb-20">
-										Explore the breathtaking beauty of Kelingking Beach, a hidden gem nestled along Bali's rugged coastline. With its iconic cliff formation and pristine sands kissed by azure waters, it's a haven for adventurers and nature enthusiasts seeking unparalleled beauty and serenity
+										Explore the breathtaking beauty of Kelingking Beach, a hidden gem nestled along
+										Bali's rugged coastline. With its iconic cliff formation and pristine sands
+										kissed by azure waters, it's a haven for adventurers and nature enthusiasts
+										seeking unparalleled beauty and serenity
 									</p>
 								</div>
 							</div>
@@ -201,15 +193,18 @@
 								<div class="banner-two-content">
 									<h1 class="banner-title medium fw-7 mb-20 white-text">
 										Monkey Forest Ubud: A Lush Sanctuary Where Humans Meet Their
-										<span class="yellow-shape"
-									> Mischievous<img
-										src="assets/images/shapes/yellow-shape.png"
-										alt="yellow-shape"
-									/></span
-									> Cousins
+										<span class="yellow-shape">
+											Mischievous<img
+												src="assets/images/shapes/yellow-shape.png"
+												alt="yellow-shape"
+											/></span
+										> Cousins
 									</h1>
 									<p class="banner-description mb-20">
-										Step into the enchanting realm of Monkey Forest Ubud, where ancient temples and lush greenery provide a haven for playful macaques. Lose yourself in this mystical sanctuary, where encounters with these spirited creatures offer glimpses into Bali's rich cultural tapestry.
+										Step into the enchanting realm of Monkey Forest Ubud, where ancient temples and
+										lush greenery provide a haven for playful macaques. Lose yourself in this
+										mystical sanctuary, where encounters with these spirited creatures offer
+										glimpses into Bali's rich cultural tapestry.
 									</p>
 								</div>
 							</div>
@@ -230,14 +225,17 @@
 									<h1 class="banner-title medium fw-7 mb-20 white-text">
 										Tirta Empul:
 										<span class="yellow-shape"
-									>Sacred Springs <img
-										src="assets/images/shapes/yellow-shape.png"
-										alt="yellow-shape"
-									/></span
-									>, Spiritual Renewal
+											>Sacred Springs <img
+												src="assets/images/shapes/yellow-shape.png"
+												alt="yellow-shape"
+											/></span
+										>, Spiritual Renewal
 									</h1>
 									<p class="banner-description mb-20">
-										Discover Tirta Empul, an ancient Hindu temple renowned for its sacred springs believed to possess purifying powers. Immerse yourself in the ritual baths where locals and pilgrims seek spiritual cleansing and renewal, amidst the tranquil beauty of Bali's countryside
+										Discover Tirta Empul, an ancient Hindu temple renowned for its sacred springs
+										believed to possess purifying powers. Immerse yourself in the ritual baths where
+										locals and pilgrims seek spiritual cleansing and renewal, amidst the tranquil
+										beauty of Bali's countryside
 									</p>
 								</div>
 							</div>
@@ -257,14 +255,17 @@
 								<div class="banner-two-content">
 									<h1 class="banner-title medium fw-7 mb-20 white-text">
 										Ulun Danu Bratan: Serenity Upon the Lake's <span class="yellow-shape"
-									>Reflections<img
-										src="assets/images/shapes/yellow-shape.png"
-										alt="yellow-shape"
-									/></span
-									>
+											>Reflections<img
+												src="assets/images/shapes/yellow-shape.png"
+												alt="yellow-shape"
+											/></span
+										>
 									</h1>
 									<p class="banner-description mb-20">
-										Ulun Danu Bratan is a serene sanctuary nestled beside Lake Bratan, where the iconic temple complex seems to float upon the water's surface. Delve into the spiritual ambiance as misty mountain vistas and tranquil waters create a picturesque backdrop for contemplation and reverence.
+										Ulun Danu Bratan is a serene sanctuary nestled beside Lake Bratan, where the
+										iconic temple complex seems to float upon the water's surface. Delve into the
+										spiritual ambiance as misty mountain vistas and tranquil waters create a
+										picturesque backdrop for contemplation and reverence.
 									</p>
 								</div>
 							</div>
@@ -272,7 +273,6 @@
 					</div>
 				</div>
 			</div>
-
 		</div>
 		<!-- navigation button start -->
 		<div class="banner-nav-btn d-none d-md-block">
@@ -367,59 +367,50 @@
 			</div>
 		</div>
 		<div class="row gy-24">
-
 			{#each destinations as item}
-			<div class="col-xxl-3 col-xl-4 col-lg-6 col-md-6">
-				<div class="tour-wrapper style-one">
-					<div class="p-relative">
-						<div class="tour-thumb image-overly">
-							<a href="tour-details.html"
-								><img src="{item.image}" alt="{item.name}" /></a
-							>
-						</div>
-						<div class="tour-meta d-flex align-items-center justify-content-between">
-
-							<div class="tour-location">
-								<span
-									><a href="{'#'}"
-										><i class="fa-regular fa-location-dot"></i> {item.name}</a
-									></span
-								>
+				<div class="col-xxl-3 col-xl-4 col-lg-6 col-md-6">
+					<div class="tour-wrapper style-one">
+						<div class="p-relative">
+							<div class="tour-thumb image-overly">
+								<a href="tour-details.html"><img src={item.image} alt={item.name} /></a>
+							</div>
+							<div class="tour-meta d-flex align-items-center justify-content-between">
+								<div class="tour-location">
+									<span
+										><a href={'#'}><i class="fa-regular fa-location-dot"></i> {item.name}</a></span
+									>
+								</div>
 							</div>
 						</div>
-					</div>
-					<div class="tour-content">
+						<div class="tour-content">
+							<h5 class="tour-title fw-5 underline mb-5">
+								{item.tagline}
+							</h5>
 
-						<h5 class="tour-title fw-5 underline mb-5">
-							{item.tagline}
-						</h5>
+							<div class="tour-divider"></div>
 
-						<div class="tour-divider"></div>
-
-						<div class="tour-meta d-flex align-items-center justify-content-between">
-							<div class="time d-flex align-items-center gap--5">
-								<span>1 day</span>
-							</div>
-							<div class="tour-btn">
-								<a class="bd-text-btn style-two" href="{'#'}"
-									>Book Now
-									<span class="icon__box">
-										<i class="fa-regular fa-arrow-right-long icon__first"></i>
-										<i class="fa-regular fa-arrow-right-long icon__second"></i>
-									</span>
-								</a>
+							<div class="tour-meta d-flex align-items-center justify-content-between">
+								<div class="time d-flex align-items-center gap--5">
+									<span>1 day</span>
+								</div>
+								<div class="tour-btn">
+									<a class="bd-text-btn style-two" href={'#'}
+										>Book Now
+										<span class="icon__box">
+											<i class="fa-regular fa-arrow-right-long icon__first"></i>
+											<i class="fa-regular fa-arrow-right-long icon__second"></i>
+										</span>
+									</a>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-				{/each}
-
+			{/each}
 		</div>
 	</div>
 </section>
 <!-- tour area end -->
-
 
 <!-- tour area start -->
 <section class="bd-tour-area section-space">
@@ -431,50 +422,71 @@
 					<h2 class="section-title title-animation">Top Trending Place</h2>
 				</div>
 			</div>
-
 		</div>
 		<div class="row gy-24">
 			<div class="col-xxl-3 col-xl-3 col-lg-4 order-lg-0 order-1">
 				<div class="cta-wrapper cta-style-four">
 					<div class="cta-thumb-four">
-						<img src="assets/images/activity/atv.png" alt="ATV in Bali">
+						<img src="assets/images/activity/atv.png" alt="ATV in Bali" />
 					</div>
 					<div class="cta-content">
 						<span class="cta-subtitle">Let's Travel With Us</span>
 						<h3 class="cta-title white-text mb-25">Hire Us Now!</h3>
 						<div class="cta-button">
-							<a href="{'#'}" class="bd-primary-btn btn-style has-arrow is-bg btn-tertiary is-white radius-60">
-								<span class="bd-primary-btn-arrow arrow-right"><i class="fa-regular fa-arrow-right"></i></span>
+							<a
+								href={'#'}
+								class="bd-primary-btn btn-style has-arrow is-bg btn-tertiary is-white radius-60"
+							>
+								<span class="bd-primary-btn-arrow arrow-right"
+									><i class="fa-regular fa-arrow-right"></i></span
+								>
 								<span class="bd-primary-btn-text">Book Now</span>
 								<span class="bd-primary-btn-circle"></span>
-								<span class="bd-primary-btn-arrow arrow-left"><i class="fa-regular fa-arrow-right"></i></span>
+								<span class="bd-primary-btn-arrow arrow-left"
+									><i class="fa-regular fa-arrow-right"></i></span
+								>
 							</a>
-
 						</div>
 					</div>
 				</div>
 			</div>
 			<div class="col-xxl-9 col-xl-9 col-lg-8 order-lg-1 order-0">
 				<div class="tour-slide-wrapper p-relative">
-					<div class="swiper tour__active_two swiper-initialized swiper-horizontal swiper-pointer-events swiper-backface-hidden">
-						<div class="swiper-wrapper" id="swiper-wrapper-53917d7eb7ffe877" aria-live="polite" style="transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;">
+					<div
+						class="swiper tour__active_two swiper-initialized swiper-horizontal swiper-pointer-events swiper-backface-hidden"
+					>
+						<div
+							class="swiper-wrapper"
+							id="swiper-wrapper-53917d7eb7ffe877"
+							aria-live="polite"
+							style="transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"
+						>
 							{#each popular_destinations as item}
-								<div class="swiper-slide swiper-slide-active" role="group" aria-label="1 / 4" style="width: 306px; margin-right: 24px;">
+								<div
+									class="swiper-slide swiper-slide-active"
+									role="group"
+									aria-label="1 / 4"
+									style="width: 306px; margin-right: 24px;"
+								>
 									<div class="tour-wrapper style-one">
 										<div class="p-relative">
 											<div class="tour-thumb image-overly">
-												<a href="{'#'}"><img src="{item.image}" alt="{item.name}"></a>
+												<a href={'#'}><img src={item.image} alt={item.name} /></a>
 											</div>
 											<div class="tour-meta d-flex align-items-center justify-content-between">
-
 												<div class="tour-location">
-													<span><a href="tour-details.html"><i class="fa-regular fa-location-dot"></i> {item.name}</a></span>
+													<span
+														><a href="tour-details.html"
+															><i class="fa-regular fa-location-dot"></i> {item.name}</a
+														></span
+													>
 												</div>
 											</div>
 										</div>
 										<div class="tour-content">
-
-											<h5 class="tour-title fw-5 underline mb-5"><a href="tour-details.html">{item.tagline}</a></h5>
+											<h5 class="tour-title fw-5 underline mb-5">
+												<a href="tour-details.html">{item.tagline}</a>
+											</h5>
 											<div class="tour-divider"></div>
 
 											<div class="tour-meta d-flex align-items-center justify-content-between">
@@ -482,11 +494,12 @@
 													<span>1 day</span>
 												</div>
 												<div class="tour-btn">
-													<a class="bd-text-btn style-two" href="{'#'}">Book Now
+													<a class="bd-text-btn style-two" href={'#'}
+														>Book Now
 														<span class="icon__box">
-        <i class="fa-regular fa-arrow-right-long icon__first"></i>
-        <i class="fa-regular fa-arrow-right-long icon__second"></i>
-    </span>
+															<i class="fa-regular fa-arrow-right-long icon__first"></i>
+															<i class="fa-regular fa-arrow-right-long icon__second"></i>
+														</span>
 													</a>
 												</div>
 											</div>
@@ -495,7 +508,8 @@
 								</div>
 							{/each}
 						</div>
-						<span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+						<span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -528,7 +542,9 @@
 				</div>
 				<div class="activity-wrapper activity-style-two">
 					<div class="activity-thumb image-overly">
-						<a href={'#'}><img src="assets/images/activity/snorkeling.png" alt="Snorkeling in Bali" /></a>
+						<a href={'#'}
+							><img src="assets/images/activity/snorkeling.png" alt="Snorkeling in Bali" /></a
+						>
 					</div>
 					<div class="activity-content">
 						<div class="activity-title-wrap">
@@ -540,7 +556,9 @@
 			<div class="col-xl-6 col-lg-8 col-md-8">
 				<div class="activity-wrapper activity-style-two">
 					<div class="activity-thumb image-overly">
-						<a href={'#'}><img src="assets/images/activity/rafting-bali.png" alt="Rafting in Bali" /></a>
+						<a href={'#'}
+							><img src="assets/images/activity/rafting-bali.png" alt="Rafting in Bali" /></a
+						>
 					</div>
 					<div class="activity-content">
 						<div class="activity-title-wrap">
@@ -552,7 +570,8 @@
 					<div class="col-xl-6 col-lg-6 col-md-6">
 						<div class="activity-wrapper activity-style-two">
 							<div class="activity-thumb image-overly">
-								<a href={'#'}><img src="assets/images/activity/watersport.png" alt="Watersport in Bali" /></a
+								<a href={'#'}
+									><img src="assets/images/activity/watersport.png" alt="Watersport in Bali" /></a
 								>
 							</div>
 							<div class="activity-content">
@@ -565,7 +584,8 @@
 					<div class="col-xl-6 col-lg-6 col-md-6">
 						<div class="activity-wrapper activity-style-two">
 							<div class="activity-thumb image-overly">
-								<a href={'#'}><img src="assets/images/activity/kecak.png" alt="Kecak Dance in Bali" /></a
+								<a href={'#'}
+									><img src="assets/images/activity/kecak.png" alt="Kecak Dance in Bali" /></a
 								>
 							</div>
 							<div class="activity-content">
@@ -580,8 +600,7 @@
 			<div class="col-xl-3 col-lg-6 col-md-12">
 				<div class="activity-wrapper activity-style-two">
 					<div class="activity-thumb image-overly">
-						<a href={'#'}><img src="assets/images/activity/atv.png" alt="ATV Ride in Bali" /></a
-						>
+						<a href={'#'}><img src="assets/images/activity/atv.png" alt="ATV Ride in Bali" /></a>
 					</div>
 					<div class="activity-content">
 						<div class="activity-title-wrap">
@@ -589,7 +608,6 @@
 						</div>
 					</div>
 				</div>
-
 			</div>
 		</div>
 	</div>
