@@ -3,42 +3,62 @@
 		{
 			"id": 1,
 			"name": "Lempuyang Temple",
-			"image": "assets/images/tour/tour-img-6.png"
+			"image": "assets/images/tour/lempuyang.png",
+			"tagline": "Gateway to the Divine: Mount Lempuyang's Mystical Portal"
 		},
 		{
 			"id": 2,
 			"name": "Tirta Gangga",
-			"image": "assets/images/tour/tour-img-2.png"
+			"image": "assets/images/tour/tirta-gangga.png",
+			"tagline": "Tranquil Waters, Serene Sanctuary"
 		},
 		{
 			"id": 3,
 			"name": "Ulun Danu Beratan Temple",
-			"image": "assets/images/tour/tour-img-3.png"
+			"image": "assets/images/tour/ulun-danu.png",
+			"tagline": "Serenity Upon the Lake's Reflections"
 		},
 		{
 			"id": 4,
 			"name": "Tanah Lot Temple",
-			"image": "assets/images/tour/tour-img-4.png"
+			"image": "assets/images/tour/tanah-lot.png",
+			"tagline": "Where Land and Sea Converge in Harmony"
 		},
 		{
 			"id": 5,
 			"name": "Kintamani",
-			"image": "assets/images/tour/tour-img-5.png"
+			"image": "assets/images/tour/kintamani.png",
+			"tagline": "Majestic Vistas, Volcanic Wonders"
 		},
 		{
 			"id": 6,
 			"name": "Mount Batur",
-			"image": "assets/images/tour/tour-img-1.png"
+			"image": "assets/images/tour/mount-batur.png",
+			"tagline": "Ascend to Bali's Sacred Summit"
 		},
 		{
 			"id": 7,
 			"name": "Uluwatu Temple",
-			"image": "assets/images/tour/tour-img-7.png"
+			"image": "assets/images/tour/uluwatu.png",
+			"tagline": "Perched on Cliffs, Bathed in Sunsets"
 		},
 		{
 			"id": 8,
 			"name": "Ubud Monkey Forest",
-			"image": "assets/images/tour/tour-img-8.png"
+			"image": "assets/images/tour/monkey-forest.png",
+			"tagline": "Where Humans Meet Their Mischievous Cousins"
+		},
+		{
+			"id": 9,
+			"name": "Penglipuran Village",
+			"image": "assets/images/tour/penglipuran.png",
+			"tagline": "Timeless Charm, Traditional Elegance"
+		},
+		{
+			"id": 10,
+			"name": "Tegalalang Rice Terrace",
+			"image": "assets/images/tour/tegalalang.png",
+			"tagline": "Nature's Canvas, Bali's Tapestry"
 		}
 	];
 
@@ -329,9 +349,7 @@
 							>
 						</div>
 						<div class="tour-meta d-flex align-items-center justify-content-between">
-							<button class="tour-favorite tour-like">
-								<i class="icon-heart"></i>
-							</button>
+
 							<div class="tour-location">
 								<span
 									><a href="{'#'}"
@@ -342,31 +360,19 @@
 						</div>
 					</div>
 					<div class="tour-content">
-						<div class="tour-rating d-flex flex-wrap align-items-center gap-10 mb-10">
-							<div class="tour-rating-icon fs-14 d-flex rating-color">
-								<i class="fa-solid fa-star"></i>
-								<i class="fa-solid fa-star"></i>
-								<i class="fa-solid fa-star"></i>
-								<i class="fa-solid fa-star"></i>
-								<i class="fa-solid fa-star"></i>
-							</div>
-							<div class="tour-rating-text">
-								<span>5 (313 Ratings)</span>
-							</div>
-						</div>
+
 						<h5 class="tour-title fw-5 underline mb-5">
-							<a href="tour-details.html">Tropical Paradise Retreat: Sun, Sand, Serenity</a>
+							{item.tagline}
 						</h5>
-						<span class="tour-price b3">$1925.00</span>
+
 						<div class="tour-divider"></div>
 
 						<div class="tour-meta d-flex align-items-center justify-content-between">
 							<div class="time d-flex align-items-center gap--5">
-								<i class="icon-heart"></i>
-								<span>10 days</span>
+								<span>1 day</span>
 							</div>
 							<div class="tour-btn">
-								<a class="bd-text-btn style-two" href="booking.html"
+								<a class="bd-text-btn style-two" href="{'#'}"
 									>Book Now
 									<span class="icon__box">
 										<i class="fa-regular fa-arrow-right-long icon__first"></i>
