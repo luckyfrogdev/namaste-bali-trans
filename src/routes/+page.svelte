@@ -61,6 +61,35 @@
 			"tagline": "Nature's Canvas, Bali's Tapestry"
 		}
 	];
+	let popular_destinations = [
+
+
+		{
+			"id": 1,
+			"name": "Tanah Lot Temple",
+			"image": "assets/images/tour/tanah-lot.png",
+			"tagline": "Where Land and Sea Converge in Harmony"
+		},
+		{
+			"id": 2,
+			"name": "Kintamani",
+			"image": "assets/images/tour/kintamani.png",
+			"tagline": "Majestic Vistas, Volcanic Wonders"
+		},
+		{
+			"id": 3,
+			"name": "Ubud Monkey Forest",
+			"image": "assets/images/tour/monkey-forest.png",
+			"tagline": "Where Humans Meet Their Mischievous Cousins"
+		},
+		{
+			"id": 4,
+			"name": "Penglipuran Village",
+			"image": "assets/images/tour/penglipuran.png",
+			"tagline": "Timeless Charm, Traditional Elegance"
+		},
+
+	];
 
 </script>
 
@@ -391,6 +420,89 @@
 </section>
 <!-- tour area end -->
 
+
+<!-- tour area start -->
+<section class="bd-tour-area section-space">
+	<div class="container">
+		<div class="row gy-24 align-items-center justify-content-between section-title-space">
+			<div class="col-lg-6 col-md-8">
+				<div class="section-title-wrapper anim-wrapper animation-style-3">
+					<span class="section-subtitle mb-10">Most Trending</span>
+					<h2 class="section-title title-animation">Top Trending Place</h2>
+				</div>
+			</div>
+
+		</div>
+		<div class="row gy-24">
+			<div class="col-xxl-3 col-xl-3 col-lg-4 order-lg-0 order-1">
+				<div class="cta-wrapper cta-style-four">
+					<div class="cta-thumb-four">
+						<img src="assets/images/activity/atv.png" alt="ATV in Bali">
+					</div>
+					<div class="cta-content">
+						<span class="cta-subtitle">Let's Travel With Us</span>
+						<h3 class="cta-title white-text mb-25">Hire Us Now!</h3>
+						<div class="cta-button">
+							<a href="{'#'}" class="bd-primary-btn btn-style has-arrow is-bg btn-tertiary is-white radius-60">
+								<span class="bd-primary-btn-arrow arrow-right"><i class="fa-regular fa-arrow-right"></i></span>
+								<span class="bd-primary-btn-text">Book Now</span>
+								<span class="bd-primary-btn-circle"></span>
+								<span class="bd-primary-btn-arrow arrow-left"><i class="fa-regular fa-arrow-right"></i></span>
+							</a>
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xxl-9 col-xl-9 col-lg-8 order-lg-1 order-0">
+				<div class="tour-slide-wrapper p-relative">
+					<div class="swiper tour__active_two swiper-initialized swiper-horizontal swiper-pointer-events swiper-backface-hidden">
+						<div class="swiper-wrapper" id="swiper-wrapper-53917d7eb7ffe877" aria-live="polite" style="transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;">
+							{#each popular_destinations as item}
+								<div class="swiper-slide swiper-slide-active" role="group" aria-label="1 / 4" style="width: 306px; margin-right: 24px;">
+									<div class="tour-wrapper style-one">
+										<div class="p-relative">
+											<div class="tour-thumb image-overly">
+												<a href="{'#'}"><img src="{item.image}" alt="{item.name}"></a>
+											</div>
+											<div class="tour-meta d-flex align-items-center justify-content-between">
+
+												<div class="tour-location">
+													<span><a href="tour-details.html"><i class="fa-regular fa-location-dot"></i> {item.name}</a></span>
+												</div>
+											</div>
+										</div>
+										<div class="tour-content">
+
+											<h5 class="tour-title fw-5 underline mb-5"><a href="tour-details.html">{item.tagline}</a></h5>
+											<div class="tour-divider"></div>
+
+											<div class="tour-meta d-flex align-items-center justify-content-between">
+												<div class="time d-flex align-items-center gap--5">
+													<span>1 day</span>
+												</div>
+												<div class="tour-btn">
+													<a class="bd-text-btn style-two" href="{'#'}">Book Now
+														<span class="icon__box">
+        <i class="fa-regular fa-arrow-right-long icon__first"></i>
+        <i class="fa-regular fa-arrow-right-long icon__second"></i>
+    </span>
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							{/each}
+						</div>
+						<span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- tour area end -->
+
 <!-- activities area start -->
 <section class="bd-activities-area section-space flash-white p-relative" id="things-to-do">
 	<div class="container">
@@ -483,299 +595,6 @@
 	</div>
 </section>
 <!-- activities area start -->
-
-<!-- tour area start -->
-<section class="bd-tour-area section-space">
-	<div class="container">
-		<div class="row gy-24 align-items-center justify-content-between section-title-space">
-			<div class="col-lg-6 col-md-8">
-				<div class="section-title-wrapper anim-wrapper animation-style-3">
-					<span class="section-subtitle mb-10">Most Trending</span>
-					<h2 class="section-title title-animation">Top Trending Place</h2>
-				</div>
-			</div>
-			<div class="col-xl-3 col-md-3 col-sm-3">
-				<div
-					class="tour-navigation btn-navigation p-relative style-three d-flex justify-content-md-end"
-				>
-					<button class="tourigo-navigation-prev"><i class="fa-regular fa-angle-left"></i></button>
-					<button class="tourigo-navigation-next"><i class="fa-regular fa-angle-right"></i></button>
-				</div>
-			</div>
-		</div>
-		<div class="row gy-24">
-			<div class="col-xxl-3 col-xl-3 col-lg-4 order-lg-0 order-1">
-				<div class="cta-wrapper cta-style-four">
-					<div class="cta-thumb-four">
-						<img src="assets/images/cta/cta-img-4.jpg" alt="image" />
-					</div>
-					<div class="cta-content">
-						<span class="cta-subtitle">Get Dubai Desert Deal</span>
-						<h3 class="cta-title white-text mb-25">Book Your Tickets Now</h3>
-						<div class="cta-button">
-							<a
-								href="booking.html"
-								class="bd-primary-btn btn-style has-arrow is-bg btn-tertiary is-white radius-60"
-							>
-								<span class="bd-primary-btn-arrow arrow-right"
-									><i class="fa-regular fa-arrow-right"></i></span
-								>
-								<span class="bd-primary-btn-text">Book Now</span>
-								<span class="bd-primary-btn-circle"></span>
-								<span class="bd-primary-btn-arrow arrow-left"
-									><i class="fa-regular fa-arrow-right"></i></span
-								>
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-xxl-9 col-xl-9 col-lg-8 order-lg-1 order-0">
-				<div class="tour-slide-wrapper p-relative">
-					<div class="swiper tour__active_two">
-						<div class="swiper-wrapper">
-							<div class="swiper-slide">
-								<div class="tour-wrapper style-one">
-									<div class="p-relative">
-										<div class="tour-thumb image-overly">
-											<a href="tour-details.html"
-												><img src="assets/images/tour/tour-img-12.png" alt="image" /></a
-											>
-										</div>
-										<div class="tour-meta d-flex align-items-center justify-content-between">
-											<button class="tour-favorite tour-like">
-												<i class="icon-heart"></i>
-											</button>
-											<div class="tour-location">
-												<span
-													><a href="tour-details.html"
-														><i class="fa-regular fa-location-dot"></i> Rome, Italy</a
-													></span
-												>
-											</div>
-										</div>
-									</div>
-									<div class="tour-content">
-										<div class="tour-rating d-flex flex-wrap align-items-center gap-10 mb-10">
-											<div class="tour-rating-icon fs-14 d-flex rating-color">
-												<i class="fa-solid fa-star"></i>
-												<i class="fa-solid fa-star"></i>
-												<i class="fa-solid fa-star"></i>
-												<i class="fa-solid fa-star"></i>
-												<i class="fa-solid fa-star"></i>
-											</div>
-											<div class="tour-rating-text">
-												<span>5 (313 Ratings)</span>
-											</div>
-										</div>
-										<h5 class="tour-title fw-5 underline mb-5">
-											<a href="tour-details.html">Island Hopping in the Caribbean: Sun & Sea</a>
-										</h5>
-										<span class="tour-price b3">$1234.00</span>
-										<div class="tour-divider"></div>
-
-										<div class="tour-meta d-flex align-items-center justify-content-between">
-											<div class="time d-flex align-items-center gap--5">
-												<i class="icon-heart"></i>
-												<span>8 days</span>
-											</div>
-											<div class="tour-btn">
-												<a class="bd-text-btn style-two" href="booking.html"
-													>Book Now
-													<span class="icon__box">
-														<i class="fa-regular fa-arrow-right-long icon__first"></i>
-														<i class="fa-regular fa-arrow-right-long icon__second"></i>
-													</span>
-												</a>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="swiper-slide">
-								<div class="tour-wrapper style-one">
-									<div class="p-relative">
-										<div class="tour-thumb image-overly">
-											<a href="tour-details.html"
-												><img src="assets/images/tour/tour-img-2.png" alt="image" /></a
-											>
-										</div>
-										<div class="tour-meta d-flex align-items-center justify-content-between">
-											<button class="tour-favorite tour-like">
-												<i class="icon-heart"></i>
-											</button>
-											<div class="tour-location">
-												<span
-													><a href="tour-details.html"
-														><i class="fa-regular fa-location-dot"></i> Paris, France</a
-													></span
-												>
-											</div>
-										</div>
-									</div>
-									<div class="tour-content">
-										<div class="tour-rating d-flex flex-wrap align-items-center gap-10 mb-10">
-											<div class="tour-rating-icon fs-14 d-flex rating-color">
-												<i class="fa-solid fa-star"></i>
-												<i class="fa-solid fa-star"></i>
-												<i class="fa-solid fa-star"></i>
-												<i class="fa-solid fa-star"></i>
-												<i class="fa-solid fa-star"></i>
-											</div>
-											<div class="tour-rating-text">
-												<span>4.8 (313 Ratings)</span>
-											</div>
-										</div>
-										<h5 class="tour-title fw-5 underline mb-5">
-											<a href="tour-details.html">Tropical Paradise Retreat: Sun, Sand, Serenity</a>
-										</h5>
-										<span class="tour-price b3">$1895.00</span>
-										<div class="tour-divider"></div>
-
-										<div class="tour-meta d-flex align-items-center justify-content-between">
-											<div class="time d-flex align-items-center gap--5">
-												<i class="icon-heart"></i>
-												<span>7 days</span>
-											</div>
-											<div class="tour-btn">
-												<a class="bd-text-btn style-two" href="booking.html"
-													>Book Now
-													<span class="icon__box">
-														<i class="fa-regular fa-arrow-right-long icon__first"></i>
-														<i class="fa-regular fa-arrow-right-long icon__second"></i>
-													</span>
-												</a>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="swiper-slide">
-								<div class="tour-wrapper style-one">
-									<div class="p-relative">
-										<div class="tour-thumb image-overly">
-											<a href="tour-details.html"
-												><img src="assets/images/tour/tour-img-13.png" alt="image" /></a
-											>
-										</div>
-										<div class="tour-meta d-flex align-items-center justify-content-between">
-											<button class="tour-favorite tour-like">
-												<i class="icon-heart"></i>
-											</button>
-											<div class="tour-location">
-												<span
-													><a href="tour-details.html"
-														><i class="fa-regular fa-location-dot"></i> London, United Kingdom</a
-													></span
-												>
-											</div>
-										</div>
-									</div>
-									<div class="tour-content">
-										<div class="tour-rating d-flex flex-wrap align-items-center gap-10 mb-10">
-											<div class="tour-rating-icon fs-14 d-flex rating-color">
-												<i class="fa-solid fa-star"></i>
-												<i class="fa-solid fa-star"></i>
-												<i class="fa-solid fa-star"></i>
-												<i class="fa-solid fa-star"></i>
-												<i class="fa-solid fa-star"></i>
-											</div>
-											<div class="tour-rating-text">
-												<span>4.8 (125 Ratings)</span>
-											</div>
-										</div>
-										<h5 class="tour-title fw-5 underline mb-5">
-											<a href="tour-details.html"
-												>Safari Expedition: Wildlife Encounters in Africa</a
-											>
-										</h5>
-										<span class="tour-price b3">$9876.00</span>
-										<div class="tour-divider"></div>
-
-										<div class="tour-meta d-flex align-items-center justify-content-between">
-											<div class="time d-flex align-items-center gap--5">
-												<i class="icon-heart"></i>
-												<span>6 days</span>
-											</div>
-											<div class="tour-btn">
-												<a class="bd-text-btn style-two" href="booking.html"
-													>Book Now
-													<span class="icon__box">
-														<i class="fa-regular fa-arrow-right-long icon__first"></i>
-														<i class="fa-regular fa-arrow-right-long icon__second"></i>
-													</span>
-												</a>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="swiper-slide">
-								<div class="tour-wrapper style-one">
-									<div class="p-relative">
-										<div class="tour-thumb image-overly">
-											<a href="tour-details.html"
-												><img src="assets/images/tour/tour-img-14.png" alt="image" /></a
-											>
-										</div>
-										<div class="tour-meta d-flex align-items-center justify-content-between">
-											<button class="tour-favorite tour-like">
-												<i class="icon-heart"></i>
-											</button>
-											<div class="tour-location">
-												<span
-													><a href="tour-details.html"
-														><i class="fa-regular fa-location-dot"></i> Maldives</a
-													></span
-												>
-											</div>
-										</div>
-									</div>
-									<div class="tour-content">
-										<div class="tour-rating d-flex flex-wrap align-items-center gap-10 mb-10">
-											<div class="tour-rating-icon fs-14 d-flex rating-color">
-												<i class="fa-solid fa-star"></i>
-												<i class="fa-solid fa-star"></i>
-												<i class="fa-solid fa-star"></i>
-												<i class="fa-solid fa-star"></i>
-												<i class="fa-solid fa-star"></i>
-											</div>
-											<div class="tour-rating-text">
-												<span>4.8 (320 Ratings)</span>
-											</div>
-										</div>
-										<h5 class="tour-title fw-5 underline mb-5">
-											<a href="tour-details.html">Asian Discovery: Temples, Traditions, Tastings</a>
-										</h5>
-										<span class="tour-price b3">$5432.00</span>
-										<div class="tour-divider"></div>
-
-										<div class="tour-meta d-flex align-items-center justify-content-between">
-											<div class="time d-flex align-items-center gap--5">
-												<i class="icon-heart"></i>
-												<span>5 days</span>
-											</div>
-											<div class="tour-btn">
-												<a class="bd-text-btn style-two" href="booking.html"
-													>Book Now
-													<span class="icon__box">
-														<i class="fa-regular fa-arrow-right-long icon__first"></i>
-														<i class="fa-regular fa-arrow-right-long icon__second"></i>
-													</span>
-												</a>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-<!-- tour area end -->
 
 <!-- testimonial area start -->
 <section class="bd-testimonial-area testimonial-space section-space-top flash-white p-relative">
