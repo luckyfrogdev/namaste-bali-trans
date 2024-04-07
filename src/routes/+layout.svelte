@@ -1,3 +1,4 @@
+
 <script>
 	import { onMount } from 'svelte';
 
@@ -43,6 +44,15 @@
 			console.error('Error loading scripts:', error);
 		}
 	}
+
+	function scrollIntoView({ target }) {
+		const el = document.querySelector(target.getAttribute('href'));
+		if (!el) return;
+		el.scrollIntoView({
+			behavior: 'smooth'
+		});
+	}
+
 	onMount(() => {
 		loadMyScripts();
 	});
@@ -170,8 +180,9 @@
 											<ul>
 
 												<li><a href="{'#'}">Home</a></li>
-												<li><a href="{'#'}">Why Choose Us</a></li>
-												<li><a href="{'#'}">Destinations</a></li>
+												<li><a href="{'#why-choose-us'}" on:click|preventDefault={scrollIntoView}>Why Choose Us</a></li>
+												<li><a href="{'#destinations'}">Destinations</a></li>
+												<li><a href="{'#things-to-do'}">Things To Do</a></li>
 												<li><a href="{'#'}">Your Plan</a></li>
 												<li><a href="{'#'}">Contact Us</a></li>
 											</ul>
@@ -226,7 +237,7 @@
 					<div class="col-xl-3 col-lg-3 col-sm-6">
 						<div class="footer-widget footer-2-col-1">
 							<div class="footer-widget-logo mb-40">
-								<a href="index-2.html">
+								<a href="{'#'}">
 									<img src="assets/images/logo/logo-black.svg" alt="logo not found" />
 								</a>
 							</div>
@@ -275,52 +286,6 @@
 									<li class="underline"><a href={'#'}>Travel Agents</a></li>
 									<li class="underline"><a href={'#'}>Help</a></li>
 								</ul>
-							</div>
-						</div>
-					</div>
-					<div class="col-xl-3 col-lg-4 col-sm-6">
-						<div class="footer-widget footer-2-col-4">
-							<h5 class="footer-widget-title mb-15">Mobile Apps</h5>
-							<div class="footer-btn mb-35 pt-5">
-								<div class="googple-play-btn mb-15">
-									<a
-										href="https://codecanyon.net/item/eduman-react-native-android-ios-education-template/48934019?s_rank=3"
-										target="_blank"
-										class="app-btn"
-									>
-										<div class="app-thumb">
-											<img src="assets/images/app/google-store-icon.png" alt="app" />
-										</div>
-										<div class="content">
-											<span>get it on</span>
-											<h6>Google Play</h6>
-										</div>
-									</a>
-								</div>
-								<div class="apple-app-btn mb-15">
-									<a
-										href="https://codecanyon.net/item/eduman-react-native-android-ios-education-template/48934019?s_rank=3"
-										target="_blank"
-										class="app-btn"
-									>
-										<div class="app-thumb">
-											<img src="assets/images/app/app-store-icon.png" alt="app" />
-										</div>
-										<div class="content">
-											<span>Download on the</span>
-											<h6>App Store</h6>
-										</div>
-									</a>
-								</div>
-							</div>
-							<div class="footer-call-wrap d-flex align-items-center gap-15">
-								<div class="footer-call-icon">
-									<i class="icon-support"></i>
-								</div>
-								<div class="footer-call-content position-relative z-index-5">
-									<h6 class="footer-call-title">Speak our expert at:</h6>
-									<a class="footer-call-number b3" href="tel:+18004536744">1-800-453-6744</a>
-								</div>
 							</div>
 						</div>
 					</div>
