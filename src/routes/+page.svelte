@@ -935,8 +935,7 @@
 <!-- team area end -->
 
 <!-- cta area start -->
-<section class="bd-cta-section theme-bg fix p-relative">
-	<div class="cta-shape-bg" data-background="assets/images/cta/cta-img-2-bg.png"></div>
+<section class="bd-cta-section theme-bg fix p-relative" id="your-plan">
 	<div class="container">
 		<div class="cta-three-shape">
 			<div class="cta-three-shape-one p-absolute">
@@ -955,14 +954,262 @@
 				<img src="assets/images/shapes/cta-x.png" alt="shape" />
 			</div>
 		</div>
-		<div class="row align-items-center">
-			<div class="col-xl-6 col-lg-4 order-lg-0 order-1" data-aos="fade-right">
-				<div class="cta-thumb-wrap cta-style-two p-relative">
-					<div class="cta-thumb-two">
-						<img src="assets/images/cta/cta-img-2.png" alt="image" />
+
+		<div class="col-lg-12" style="margin-bottom: 100px; margin-top: 30px">
+			<header class="container d-flex flex-column align-items-center py-3">
+				<h1 class="text-center text-white">Plan your next holiday with Namaste Bali Trans</h1>
+				<br/>
+				<p class="text-center text-white">
+					Arrange your dream vacation with Namaste Bali Trans and receive a free itinerary tailored
+					only for you.
+				</p>
+			</header>
+
+			<main class="container mt-5">
+				<form class="form-control" style="padding: 20px">
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-input-title">
+								<label for="plan"
+									>Visitor(s)
+									<span>*</span></label
+								>
+							</div>
+							<div class="input-group mb-3">
+								<span class="input-group-text" id="basic-addon1">Adults</span>
+								<input
+									type="number"
+									class="form-control"
+									placeholder="Number of Adults"
+									aria-label="Number of Adults"
+									aria-describedby="basic-addon1"
+									required
+								/>
+							</div>
+							<div class="input-group mb-3">
+								<span class="input-group-text" id="basic-addon1">Children</span>
+								<input
+									type="number"
+									class="form-control"
+									placeholder="Number of Children"
+									aria-label="Number of Children"
+									aria-describedby="basic-addon1"
+								/>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-input-title">
+								<label for="plan"
+									>Day(s)
+									<span>*</span></label
+								>
+							</div>
+							<div class="input-group mb-3">
+								<span class="input-group-text" id="basic-addon1">Duration</span>
+								<input
+									type="number"
+									class="form-control"
+									placeholder="Number of Days"
+									aria-label="Number of Days"
+									aria-describedby="basic-addon1"
+									required
+								/>
+							</div>
+						</div>
 					</div>
-				</div>
-			</div>
+
+					<div class="row">
+						<div class="col-md-4">
+							<div class="form-input-title">
+								<label for="plan"
+									>When
+									<span>*</span></label
+								>
+							</div>
+							<div class="input-box-select" style="display: none;">
+								<select name="travel_month" id="service" required>
+									<option value="">Select Travel Month</option>
+									<option value="january">January</option>
+									<option value="february">February</option>
+									<option value="march">March</option>
+									<option value="april">April</option>
+									<option value="may">May</option>
+									<option value="june">June</option>
+									<option value="july">July</option>
+									<option value="august">August</option>
+									<option value="september">September</option>
+									<option value="october">October</option>
+									<option value="november">November</option>
+									<option value="december">December</option>
+								</select>
+							</div>
+							<div class="nice-select input-box-select" tabindex="0">
+								<span class="current">Select Travel Month</span>
+								<ul class="list">
+									<li data-value="january" class="option">January</li>
+									<li data-value="february" class="option">February</li>
+									<li data-value="march" class="option">March</li>
+									<li data-value="april" class="option">April</li>
+									<li data-value="may" class="option">May</li>
+									<li data-value="june" class="option">June</li>
+									<li data-value="july" class="option">July</li>
+									<li data-value="august" class="option">August</li>
+									<li data-value="september" class="option">September</li>
+									<li data-value="october" class="option">October</li>
+									<li data-value="november" class="option">November</li>
+									<li data-value="december" class="option">December</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="col-md-4">
+								<div class="form-input-title">
+									<label for="plan"
+										>Travel Type
+										<span>*</span></label
+									>
+								</div>
+								<div class="input-box-select" style="display: none;">
+									<select name="travel_type" id="service" required>
+										<option value="">Select Travel Type</option>
+										<option value="adventure">Adventure</option>
+										<option value="destination">Destination</option>
+										<option value="explore">Explore</option>
+										<option value="holidays">Holidays</option>
+										<option value="on budget">On Budget</option>
+										<option value="popular">Popular</option>
+										<option value="romantic">Romantic</option>
+										<option value="vacation">Vacation</option>
+										<option value="other">Other</option>
+									</select>
+								</div>
+								<div class="nice-select input-box-select" tabindex="0">
+									<span class="current">Select Travel Type</span>
+									<ul class="list">
+										<li data-value="adventure" class="option">Adventure</li>
+										<li data-value="destination" class="option">Destination</li>
+										<li data-value="explore" class="option">Explore</li>
+										<li data-value="holidays" class="option">Holidays</li>
+										<li data-value="on budget" class="option">On Budget</li>
+										<li data-value="popular" class="option">Popular</li>
+										<li data-value="romantic" class="option">Romantic</li>
+										<li data-value="vacation" class="option">Vacation</li>
+										<li data-value="other" class="option">Other</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="col-md-4">
+								<div class="form-input-title">
+									<label for="plan"
+										>Your Diet
+										<span>*</span></label
+									>
+								</div>
+								<div class="input-box-select" style="display: none;">
+									<select name="diet" id="service" required>
+										<option value="">Select Your Diet Preference</option>
+										<option value="halal">Halal Food</option>
+										<option value="pork">I Love Pork</option>
+										<option value="vegetarian">Vegetarian</option>
+									</select>
+								</div>
+								<div class="nice-select input-box-select" tabindex="0">
+									<span class="current">Select Your Diet Preference</span>
+									<ul class="list">
+										<li data-value="halal" class="option">Halal Food</li>
+										<li data-value="pork" class="option">I Love Pork</li>
+										<li data-value="vegetarian" class="option">Vegetarian</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<br />
+					<div class="col-lg-12 text-center">
+						<div class="form-input-box">
+							<div class="form-input-title">
+								<label for="plan">Holiday's Plan<span>*</span></label>
+							</div>
+							<div class="form-input">
+								<textarea
+									id="plan"
+									name="description"
+									placeholder="Tell us about your holidays plan..."
+									required
+								></textarea>
+							</div>
+						</div>
+					</div>
+					<div class="row mt-4">
+						<div class="col-lg-4">
+							<div class="form-input-box">
+								<div class="form-input-title">
+									<label for="fullName">Full Name<span>*</span></label>
+								</div>
+								<div class="form-input">
+									<input
+										name="name"
+										id="fullName"
+										type="text"
+										placeholder="Type your name"
+										required
+									/>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="form-input-box">
+								<div class="form-input-title">
+									<label for="email">Email<span>*</span></label>
+								</div>
+								<div class="form-input">
+									<input
+										name="email"
+										id="email"
+										type="email"
+										placeholder="Type your email"
+										required
+									/>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="form-input-box">
+								<div class="form-input-title">
+									<label for="whatsapp">Whatsapp Number<span>*</span></label>
+								</div>
+								<div class="form-input">
+									<input
+										name="name"
+										id="whatsapp"
+										type="text"
+										placeholder="Your whatsapp with country code"
+										required
+									/>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row mt-4">
+						<div class="col-md-12 d-flex justify-content-center">
+							<div class="col-lg-2">
+								<button type="submit" class="bd-primary-btn btn-style has-arrow is-bg radius-60">
+									<span class="bd-primary-btn-arrow arrow-right"
+										><i class="fa-regular fa-arrow-right"></i></span
+									>
+									<span class="bd-primary-btn-text">Book Now</span>
+									<span class="bd-primary-btn-circle"></span>
+									<span class="bd-primary-btn-arrow arrow-left"
+										><i class="fa-regular fa-arrow-right"></i></span
+									>
+								</button>
+							</div>
+						</div>
+					</div>
+				</form>
+			</main>
 		</div>
 	</div>
 </section>

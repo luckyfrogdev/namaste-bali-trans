@@ -14,9 +14,6 @@
 	// Function to load your specific scripts
 	async function loadMyScripts() {
 		try {
-			await loadScript(
-				'https://html.bdevs.net/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js'
-			);
 			await loadScript('assets/js/vendor/jquery-3.7.1.min.js');
 			await loadScript('assets/js/plugins/waypoints.min.js');
 			await loadScript('assets/js/vendor/bootstrap.bundle.min.js');
@@ -186,7 +183,7 @@
 												</li>
 												<li><a href={'#destinations'}>Destinations</a></li>
 												<li><a href={'#things-to-do'}>Things To Do</a></li>
-												<li><a href={'#'}>Your Plan</a></li>
+												<li><a href={'#your-plan'}>Your Plan</a></li>
 												<li><a href={'#'}>Contact Us</a></li>
 											</ul>
 										</nav>
