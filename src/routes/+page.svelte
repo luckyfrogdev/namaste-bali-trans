@@ -372,7 +372,7 @@
 					<div class="tour-wrapper style-one">
 						<div class="p-relative">
 							<div class="tour-thumb image-overly">
-								<a href="tour-details.html"><img src={item.image} alt={item.name} /></a>
+								<a href="{'#'}"><img src={item.image} alt={item.name} /></a>
 							</div>
 							<div class="tour-meta d-flex align-items-center justify-content-between">
 								<div class="tour-location">
@@ -476,7 +476,7 @@
 											<div class="tour-meta d-flex align-items-center justify-content-between">
 												<div class="tour-location">
 													<span
-														><a href="tour-details.html"
+														><a href="{'#'}"
 															><i class="fa-regular fa-location-dot"></i> {item.name}</a
 														></span
 													>
@@ -485,7 +485,7 @@
 										</div>
 										<div class="tour-content">
 											<h5 class="tour-title fw-5 underline mb-5">
-												<a href="tour-details.html">{item.tagline}</a>
+												<a href="{'#'}">{item.tagline}</a>
 											</h5>
 											<div class="tour-divider"></div>
 
@@ -832,13 +832,13 @@
 				<div class="team-wrapper team-style">
 					<div class="team-content-wrap position-relative">
 						<div class="team-thumb">
-							<a href="team-details.html"
+							<a href="{'#'}"
 								><img src="assets/images/team/team-img-1.png" alt="image" /></a
 							>
 						</div>
 						<div class="team-content">
 							<h6 class="team-member-name b3 underline">
-								<a href="team-details.html">Brendan Fraser</a>
+								<a href="{'#'}">Brendan Fraser</a>
 							</h6>
 							<span>Tour Guide</span>
 						</div>
@@ -867,13 +867,13 @@
 				<div class="team-wrapper team-style">
 					<div class="team-content-wrap position-relative">
 						<div class="team-thumb">
-							<a href="team-details.html"
+							<a href="{'#'}"
 								><img src="assets/images/team/team-img-3.png" alt="image" /></a
 							>
 						</div>
 						<div class="team-content">
 							<h6 class="team-member-name b3 underline">
-								<a href="team-details.html">Sophia Miller</a>
+								<a href="{'#'}">Sophia Miller</a>
 							</h6>
 							<span>Manager</span>
 						</div>
@@ -902,13 +902,13 @@
 				<div class="team-wrapper team-style">
 					<div class="team-content-wrap position-relative">
 						<div class="team-thumb">
-							<a href="team-details.html"
+							<a href="{'#'}"
 								><img src="assets/images/team/team-img-2.png" alt="image" /></a
 							>
 						</div>
 						<div class="team-content">
 							<h6 class="team-member-name b3 underline">
-								<a href="team-details.html">Ethan Mitchell</a>
+								<a href="{'#'}">Ethan Mitchell</a>
 							</h6>
 							<span>Tour Guide</span>
 						</div>

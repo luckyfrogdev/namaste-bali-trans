@@ -75,7 +75,7 @@
 				<div class="offcanvas-content">
 					<div class="offcanvas-top d-flex justify-content-between align-items-center mb-25">
 						<div class="offcanvas-logo">
-							<a href="index-2.html">
+							<a href="{'#'}">
 								<img src="assets/images/logo/logo-black.svg" alt="logo not found" />
 							</a>
 						</div>
@@ -267,15 +267,15 @@
 							<h5 class="footer-widget-title">Company</h5>
 							<div class="footer-widget-links">
 								<ul>
-									<li class="underline"><a href="about.html">About Us</a></li>
-									<li class="underline"><a href="careers.html">Careers</a></li>
-									<li class="underline"><a href="team.html">Travel Guides</a></li>
+									<li class="underline"><a href="{'#'}">About Us</a></li>
+									<li class="underline"><a href="{'#'}">Careers</a></li>
+									<li class="underline"><a href="{'#'}">Travel Guides</a></li>
 									<li class="underline">
-										<a href="tour-details.html">Traveler Review</a><span class="bd-badge warning"
+										<a href="{'#'}">Traveler Review</a><span class="bd-badge warning"
 											>New</span
 										>
 									</li>
-									<li class="underline"><a href="contact.html">Contact Now</a></li>
+									<li class="underline"><a href="{'#'}">Contact Now</a></li>
 								</ul>
 							</div>
 						</div>
@@ -285,9 +285,9 @@
 							<h5 class="footer-widget-title">Service</h5>
 							<div class="footer-widget-links">
 								<ul>
-									<li class="underline"><a href="destinations.html">Destinations</a></li>
-									<li class="underline"><a href="tour.html">Tour Listing</a></li>
-									<li class="underline"><a href="javascript.void(0)">Tour Booking </a></li>
+									<li class="underline"><a href="{'#'}">Destinations</a></li>
+									<li class="underline"><a href="{'#'}">Tour Listing</a></li>
+									<li class="underline"><a href="{'#'}">Tour Booking </a></li>
 									<li class="underline"><a href={'#'}>Travel Agents</a></li>
 									<li class="underline"><a href={'#'}>Help</a></li>
 								</ul>
