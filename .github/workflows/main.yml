@@ -21,4 +21,4 @@ jobs:
 
       - name: Deploy to VPS
         run: |
-          sshpass -p ${{ secrets.VPS_PASSWORD }} ssh username@${{ secrets.VPS_HOST }} "sudo su && cd /www/wwwroot/namaste-bali-trans && git pull origin main && source build.sh"
+          sshpass -p ${{ secrets.VPS_PASSWORD }} ssh ${{ secrets.VPS_USERNAME }}:${{ secrets.VPS_PASSWORD }}@${{ secrets.VPS_HOST }} "sudo su && cd /www/wwwroot/namaste-bali-trans && git pull origin main && source build.sh"
