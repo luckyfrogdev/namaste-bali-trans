@@ -109,45 +109,33 @@
 									<a target="_blank" href={'#'}> <i class="fal fa-map-marker-alt"></i></a>
 								</div>
 								<div class="offcanvas-contact-text">
-									<a target="_blank" href={'#'}>1426 Center StreetBend, 97702, California, USA</a>
+									<a target="_blank" href={'javascript:void(0)'}>Br. Palungan Batu, Batuagung, Jembrana
+										Jembrana</a>
 								</div>
 							</li>
 							<li class="d-flex align-items-center gap-10">
 								<div class="offcanvas-contact-icon">
-									<a href="tel:+415864872899"><i class="far fa-phone"></i></a>
+									<a href="https://wa.me/6283892565216?text=Hello, i want to know the price of your travel"><i class="far fa-phone"></i></a>
 								</div>
 								<div class="offcanvas-contact-text">
-									<a href="tel:+415864872899">+415-864-8728-99</a>
+									<a href="https://wa.me/6283892565216?text=Hello, i want to know the price of your travel">+62-838-9256-5216 (Gung Dwi)</a>
 								</div>
 							</li>
 							<li class="d-flex align-items-center gap-10">
 								<div class="offcanvas-contact-icon">
-									<a
-										href="https://html.bdevs.net/cdn-cgi/l/email-protection{'#'}61121411110e131521150e141308060e4f020e0c"
-										><i class="fal fa-envelope"></i></a
-									>
+									<a href="https://wa.me/6283114998908?text=Hello, i want to know the price of your travel"><i class="far fa-phone"></i></a>
 								</div>
 								<div class="offcanvas-contact-text">
-									<a
-										href="https://html.bdevs.net/cdn-cgi/l/email-protection{'#'}e5969095958a9791a5918a90978c828acb868a88"
-										><span
-											class="__cf_email__"
-											data-cfemail="9deee8ededf2efe9dde9f2e8eff4faf2b3fef2f0"
-											>[email&{'#'}160;protected]</span
-										></a
-									>
+									<a href="https://wa.me/6283114998908?text=Hello, i want to know the price of your travel">+62-831-1499-8908(Gus Aji)</a>
 								</div>
 							</li>
 						</ul>
 					</div>
 
 					<div class="offcanvas-social">
-						<h4 class="offcanvas-title-meta">Subscribe & Follow</h4>
+						<h4 class="offcanvas-title-meta">Let's Connected With Us</h4>
 						<ul>
-							<li><a href={'#'}><i class="fab fa-facebook-f"></i></a></li>
-							<li><a href={'#'}><i class="fab fa-twitter"></i></a></li>
-							<li><a href={'#'}><i class="fab fa-youtube"></i></a></li>
-							<li><a href={'#'}><i class="fab fa-linkedin"></i></a></li>
+							<li><a href="https://web.facebook.com/goes.tillkiss"><i class="fab fa-facebook-f"></i></a></li>
 						</ul>
 					</div>
 				</div>
@@ -184,14 +172,13 @@
 												<li><a href={'#destinations'}>Destinations</a></li>
 												<li><a href={'#things-to-do'}>Things To Do</a></li>
 												<li><a href={'#your-plan'}>Your Plan</a></li>
-												<li><a href={'#'}>Contact Us</a></li>
 											</ul>
 										</nav>
 									</div>
 								</div>
 								<div class="header-hamburger ml-20">
 									<div class="sidebar-toggle">
-										<a class="bar-icon style-two" href={'#'}>
+										<a class="bar-icon style-two" href={'javascript:void(0)'}>
 											<span></span>
 											<span></span>
 											<span></span>
@@ -234,7 +221,7 @@
 		<div class="section-space">
 			<div class="container">
 				<div class="row gy-24">
-					<div class="col-xl-3 col-lg-3 col-sm-6">
+					<div class="col-xl-12 col-lg-12 col-sm-12">
 						<div class="footer-widget footer-2-col-1">
 							<div class="footer-widget-logo mb-40">
 								<a href={'#'}>
@@ -253,70 +240,26 @@
 								<div class="d-flex flex-wrap align-items-center gap--5">
 									<span class="b6">Follow Us:</span>
 									<div class="theme-social">
-										<a href={'#'}><i class="icon-facebook"></i></a>
-										<a href={'#'}><i class="icon-twitter-x"></i></a>
-										<a href={'#'}><i class="icon-linkedin"></i></a>
-										<a href={'#'}><i class="icon-youtube"></i></a>
+										<a href="https://web.facebook.com/goes.tillkiss"><i class="icon-facebook"></i></a>
 									</div>
 								</div>
+
 							</div>
 						</div>
 					</div>
-					<div class="col-xl-3 col-lg-3 col-sm-6">
-						<div class="footer-widget footer-2-col-2">
-							<h5 class="footer-widget-title">Company</h5>
-							<div class="footer-widget-links">
-								<ul>
-									<li class="underline"><a href="{'#'}">About Us</a></li>
-									<li class="underline"><a href="{'#'}">Careers</a></li>
-									<li class="underline"><a href="{'#'}">Travel Guides</a></li>
-									<li class="underline">
-										<a href="{'#'}">Traveler Review</a><span class="bd-badge warning"
-											>New</span
-										>
-									</li>
-									<li class="underline"><a href="{'#'}">Contact Now</a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-					<div class="col-xl-3 col-lg-2 col-sm-6">
-						<div class="footer-widget footer-2-col-3">
-							<h5 class="footer-widget-title">Service</h5>
-							<div class="footer-widget-links">
-								<ul>
-									<li class="underline"><a href="{'#'}">Destinations</a></li>
-									<li class="underline"><a href="{'#'}">Tour Listing</a></li>
-									<li class="underline"><a href="{'#'}">Tour Booking </a></li>
-									<li class="underline"><a href={'#'}>Travel Agents</a></li>
-									<li class="underline"><a href={'#'}>Help</a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
+
 				</div>
 			</div>
 		</div>
 		<div class="footer-copyright-area">
 			<div class="container">
 				<div class="row gy-24 align-items-center justify-content-between align-content-end">
-					<div class="col-xl-4 col-lg-6 col-md-6 col-12">
+					<div class="col-xl-8 col-lg-8 col-md-8 col-12">
 						<div class="footer-copyright underline">
 							<p>
 								Copyright @ {new Date().getFullYear()}
 								<a href={'#'} target="_blank">Namaste Bali Trans</a> . All Right Reserved
 							</p>
-						</div>
-					</div>
-					<div class="col-xl-3 col-lg-5 col-md-6 col-12">
-						<div class="footer-card">
-							<ul>
-								<li><img src="assets/images/icons/visa.png" alt="card" /></li>
-								<li><img src="assets/images/icons/master.png" alt="card" /></li>
-								<li><img src="assets/images/icons/apple-pay.png" alt="card" /></li>
-								<li><img src="assets/images/icons/paypal.png" alt="card" /></li>
-								<li><img src="assets/images/icons/amex.png" alt="card" /></li>
-							</ul>
 						</div>
 					</div>
 				</div>
