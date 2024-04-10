@@ -70,6 +70,30 @@
 			name: 'Tegalalang Rice Terrace',
 			image: 'assets/images/tour/tegalalang.png',
 			tagline: "Nature's Canvas, Bali's Tapestry"
+		},
+		{
+			id: 11,
+			name: 'Kelingking Beach',
+			image: 'assets/images/tour/kelingking-beach.png',
+			tagline: 'Spectacular Cliff Views, Pristine Sands'
+		},
+		{
+			id: 12,
+			name: 'Angel\'s Billabong',
+			image: 'assets/images/tour/angels-billabong.png',
+			tagline: 'Coastal Wonder, Natural Rock Formation'
+		},
+		{
+			id: 13,
+			name: 'Broken Beach',
+			image: 'assets/images/tour/broken-beach.png',
+			tagline: 'Nature\'s Amphitheater, Majestic Beauty'
+		},
+		{
+			id: 14,
+			name: 'Crystal Bay Beach',
+			image: 'assets/images/tour/crystal-bay-beach.png',
+			tagline: 'Turquoise Waters, Paradise Found'
 		}
 	];
 
