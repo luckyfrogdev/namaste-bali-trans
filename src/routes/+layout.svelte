@@ -75,8 +75,8 @@
 				<div class="offcanvas-content">
 					<div class="offcanvas-top d-flex justify-content-between align-items-center mb-25">
 						<div class="offcanvas-logo">
-							<a href="{'#'}">
-								<img src="assets/images/logo/logo-black.svg" alt="logo not found" />
+							<a href="{'javascript:void(0)'}">
+								<img src="assets/images/logo/logo-black.png" alt="logo not found" />
 							</a>
 						</div>
 						<div class="offcanvas-close">
@@ -106,7 +106,7 @@
 						<ul>
 							<li class="d-flex align-items-center gap-10">
 								<div class="offcanvas-contact-icon">
-									<a target="_blank" href={'#'}> <i class="fal fa-map-marker-alt"></i></a>
+									<a target="_blank" href={'javascript:void(0)'}> <i class="fal fa-map-marker-alt"></i></a>
 								</div>
 								<div class="offcanvas-contact-text">
 									<a target="_blank" href={'javascript:void(0)'}>Br. Palungan Batu, Batuagung, Jembrana
@@ -154,7 +154,7 @@
 					<div class="header-main">
 						<div class="header-left">
 							<div class="header-logo">
-								<a href="/"><img src="assets/images/logo/logo-black.svg" alt="logo not found" /></a>
+								<a href="/"><img src="assets/images/logo/logo-black.png" alt="logo not found" /></a>
 							</div>
 						</div>
 						<div class="header-right">
@@ -163,7 +163,7 @@
 									<div class="main-menu">
 										<nav class="main-menu main-menu-three" id="mobile-menu">
 											<ul>
-												<li><a href={'#'}>Home</a></li>
+												<li><a href={'javascript:void(0)'}>Home</a></li>
 												<li>
 													<a href={'#why-choose-us'} on:click|preventDefault={scrollIntoView}
 														>Why Choose Us</a
@@ -224,8 +224,8 @@
 					<div class="col-xl-12 col-lg-12 col-sm-12">
 						<div class="footer-widget footer-2-col-1">
 							<div class="footer-widget-logo mb-40">
-								<a href={'#'}>
-									<img src="assets/images/logo/logo-black.svg" alt="logo not found" />
+								<a href={'javascript:void(0)'}>
+									<img src="assets/images/logo/logo-black.png" alt="logo not found" />
 								</a>
 							</div>
 							<div class="footer-widget-content">
@@ -258,7 +258,7 @@
 						<div class="footer-copyright underline">
 							<p>
 								Copyright @ {new Date().getFullYear()}
-								<a href={'#'} target="_blank">Namaste Bali Trans</a> . All Right Reserved
+								<a href={'javascript:void(0)'} target="_blank">Namaste Bali Trans</a> . All Right Reserved
 							</p>
 						</div>
 					</div>
