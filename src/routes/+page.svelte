@@ -1,14 +1,14 @@
 <script lang="ts">
-	let adult_visitor = "";
-	let children_visitor = "";
-	let duration = "";
-	let travel_month = "";
-	let travel_type = "";
-	let diet_preference = "";
-	let travel_plan = "";
-	let name = "";
-	let email = "";
-	let whatsapp = "";
+	let adult_visitor = '';
+	let children_visitor = '';
+	let duration = '';
+	let travel_month = '';
+	let travel_type = '';
+	let diet_preference = '';
+	let travel_plan = '';
+	let name = '';
+	let email = '';
+	let whatsapp = '';
 
 	let destinations = [
 		{
@@ -79,7 +79,7 @@
 		},
 		{
 			id: 12,
-			name: 'Angel\'s Billabong',
+			name: "Angel's Billabong",
 			image: 'assets/images/tour/angels-billabong.png',
 			tagline: 'Coastal Wonder, Natural Rock Formation'
 		},
@@ -87,7 +87,7 @@
 			id: 13,
 			name: 'Broken Beach',
 			image: 'assets/images/tour/broken-beach.png',
-			tagline: 'Nature\'s Amphitheater, Majestic Beauty'
+			tagline: "Nature's Amphitheater, Majestic Beauty"
 		},
 		{
 			id: 14,
@@ -149,34 +149,39 @@
 
 	let testimonials = [
 		{
-			"id":1,
-			"name": "Aarav Patel",
-			"description": "My journey with Namaste Bali Trans was absolutely delightful. The drivers were not only skilled and efficient but also incredibly warm and friendly. They made me feel right at home in Bali, sharing fascinating insights about the local culture and attractions. Thanks to Namaste Bali Trans, my trip was truly unforgettable.",
-			"picture": "https://ui-avatars.com/api/?name=AP&size=512&background=0D8ABC&color=fff"
+			id: 1,
+			name: 'Aarav Patel',
+			description:
+				'My journey with Namaste Bali Trans was absolutely delightful. The drivers were not only skilled and efficient but also incredibly warm and friendly. They made me feel right at home in Bali, sharing fascinating insights about the local culture and attractions. Thanks to Namaste Bali Trans, my trip was truly unforgettable.',
+			picture: 'https://ui-avatars.com/api/?name=AP&size=512&background=0D8ABC&color=fff'
 		},
 		{
-			"id":2,
-			"name": "Aisha Sharma",
-			"description": "Namaste Bali Trans provided impeccable service throughout my stay in Bali. The drivers were always punctual and went above and beyond to ensure my comfort and safety. Their local knowledge helped me discover hidden gems and experience Bali in a truly authentic way. I highly recommend Namaste Bali Trans to anyone visiting this beautiful island.",
-			"picture": "https://ui-avatars.com/api/?name=AS&size=512&background=0D8ABC&color=fff"
+			id: 2,
+			name: 'Aisha Sharma',
+			description:
+				'Namaste Bali Trans provided impeccable service throughout my stay in Bali. The drivers were always punctual and went above and beyond to ensure my comfort and safety. Their local knowledge helped me discover hidden gems and experience Bali in a truly authentic way. I highly recommend Namaste Bali Trans to anyone visiting this beautiful island.',
+			picture: 'https://ui-avatars.com/api/?name=AS&size=512&background=0D8ABC&color=fff'
 		},
 		{
-			"id":3,
-			"name": "Rohan Gupta",
-			"description": "I had an amazing experience with Namaste Bali Trans during my recent trip to Bali. The drivers were professional, courteous, and knowledgeable about the best routes and attractions on the island. They made me feel at ease and took care of all my transportation needs, allowing me to focus on enjoying my vacation. I highly recommend their services to anyone traveling to Bali.",
-			"picture": "https://ui-avatars.com/api/?name=RG&size=512&background=0D8ABC&color=fff"
+			id: 3,
+			name: 'Rohan Gupta',
+			description:
+				'I had an amazing experience with Namaste Bali Trans during my recent trip to Bali. The drivers were professional, courteous, and knowledgeable about the best routes and attractions on the island. They made me feel at ease and took care of all my transportation needs, allowing me to focus on enjoying my vacation. I highly recommend their services to anyone traveling to Bali.',
+			picture: 'https://ui-avatars.com/api/?name=RG&size=512&background=0D8ABC&color=fff'
 		},
 		{
-			"id":4,
-			"name": "Priya Singh",
-			"description": "Namaste Bali Trans provided exceptional service from start to finish. The drivers were friendly, helpful, and always willing to go the extra mile to ensure my comfort. Whether it was arranging airport transfers or suggesting local eateries, they made my trip to Bali stress-free and enjoyable. I couldn't have asked for a better transportation service.",
-			"picture": "https://ui-avatars.com/api/?name=PS&size=512&background=0D8ABC&color=fff"
+			id: 4,
+			name: 'Priya Singh',
+			description:
+				"Namaste Bali Trans provided exceptional service from start to finish. The drivers were friendly, helpful, and always willing to go the extra mile to ensure my comfort. Whether it was arranging airport transfers or suggesting local eateries, they made my trip to Bali stress-free and enjoyable. I couldn't have asked for a better transportation service.",
+			picture: 'https://ui-avatars.com/api/?name=PS&size=512&background=0D8ABC&color=fff'
 		},
 		{
-			"id":5,
-			"name": "Arjun Kapoor",
-			"description": "My experience with Namaste Bali Trans was outstanding. The drivers were not only professional but also incredibly knowledgeable about Bali's attractions and culture. They provided valuable insights and recommendations that made my trip truly memorable. I highly recommend Namaste Bali Trans to anyone seeking reliable transportation services in Bali.",
-			"picture": "https://ui-avatars.com/api/?name=AK&size=512&background=0D8ABC&color=fff"
+			id: 5,
+			name: 'Arjun Kapoor',
+			description:
+				"My experience with Namaste Bali Trans was outstanding. The drivers were not only professional but also incredibly knowledgeable about Bali's attractions and culture. They provided valuable insights and recommendations that made my trip truly memorable. I highly recommend Namaste Bali Trans to anyone seeking reliable transportation services in Bali.",
+			picture: 'https://ui-avatars.com/api/?name=AK&size=512&background=0D8ABC&color=fff'
 		}
 	];
 
@@ -186,24 +191,24 @@
 		let capitalizedTravelMonth = travel_month.charAt(0).toUpperCase() + travel_month.slice(1);
 
 		// Map diet_preference values to their corresponding full text
-		let dietPreferenceText =  "";
+		let dietPreferenceText = '';
 
 		switch (diet_preference) {
-			case "pork":
-				dietPreferenceText = "I Love Pork";
+			case 'pork':
+				dietPreferenceText = 'I Love Pork';
 				break;
-			case "halal_food":
-				dietPreferenceText = "Halal Food";
+			case 'halal_food':
+				dietPreferenceText = 'Halal Food';
 				break;
-			case "vegetarian":
-				dietPreferenceText = "Vegetarian";
+			case 'vegetarian':
+				dietPreferenceText = 'Vegetarian';
 				break;
 			default:
-				dietPreferenceText = "No Preference";
-
+				dietPreferenceText = 'No Preference';
 		}
 
-		let message = `Hello! I would like to book a trip with the following details:\n\n` +
+		let message =
+			`Hello! I would like to book a trip with the following details:\n\n` +
 			`Adult Visitors: ${adult_visitor}\n` +
 			`Children Visitors: ${children_visitor}\n` +
 			`Duration: ${duration} days\n` +
@@ -217,7 +222,7 @@
 			`WhatsApp: ${whatsapp}`;
 
 		// Here you can replace the console.log with the actual code to send WhatsApp message
-		console.log("Sending WhatsApp message:", message);
+		console.log('Sending WhatsApp message:', message);
 
 		// Encode the message for URL
 		let encodedMessage = encodeURIComponent(message);
@@ -228,8 +233,6 @@
 		// Open the WhatsApp chat link
 		window.open(whatsappLink);
 	}
-
-
 </script>
 
 <svelte:head>
@@ -520,7 +523,9 @@
 							<div class="tour-meta d-flex align-items-center justify-content-between">
 								<div class="tour-location">
 									<span
-										><a href={'javascript:void(0)'}><i class="fa-regular fa-location-dot"></i> {item.name}</a></span
+										><a href={'javascript:void(0)'}
+											><i class="fa-regular fa-location-dot"></i> {item.name}</a
+										></span
 									>
 								</div>
 							</div>
@@ -619,7 +624,8 @@
 											<div class="tour-meta d-flex align-items-center justify-content-between">
 												<div class="tour-location">
 													<span
-														><a href={'javascript:void(0)'}><i class="fa-regular fa-location-dot"></i> {item.name}</a
+														><a href={'javascript:void(0)'}
+															><i class="fa-regular fa-location-dot"></i> {item.name}</a
 														></span
 													>
 												</div>
@@ -674,7 +680,9 @@
 			<div class="col-xl-3 col-lg-4 col-md-4">
 				<div class="activity-wrapper activity-style-two">
 					<div class="activity-thumb image-overly">
-						<a href={'javascript:void(0)'}><img src="assets/images/activity/swing.png" alt="Swing in Bali" /></a>
+						<a href={'javascript:void(0)'}
+							><img src="assets/images/activity/swing.png" alt="Swing in Bali" /></a
+						>
 					</div>
 					<div class="activity-content">
 						<div class="activity-title-wrap">
@@ -690,7 +698,9 @@
 					</div>
 					<div class="activity-content">
 						<div class="activity-title-wrap">
-							<h5 class="activity-title underline-two"><a href={'javascript:void(0)'}>Snorkeling</a></h5>
+							<h5 class="activity-title underline-two">
+								<a href={'javascript:void(0)'}>Snorkeling</a>
+							</h5>
 						</div>
 					</div>
 				</div>
@@ -704,7 +714,9 @@
 					</div>
 					<div class="activity-content">
 						<div class="activity-title-wrap">
-							<h5 class="activity-title underline-two"><a href={'javascript:void(0)'}>Rafting</a></h5>
+							<h5 class="activity-title underline-two">
+								<a href={'javascript:void(0)'}>Rafting</a>
+							</h5>
 						</div>
 					</div>
 				</div>
@@ -718,7 +730,9 @@
 							</div>
 							<div class="activity-content">
 								<div class="activity-title-wrap">
-									<h5 class="activity-title underline-two"><a href={'javascript:void(0)'}>Watersport</a></h5>
+									<h5 class="activity-title underline-two">
+										<a href={'javascript:void(0)'}>Watersport</a>
+									</h5>
 								</div>
 							</div>
 						</div>
@@ -732,7 +746,9 @@
 							</div>
 							<div class="activity-content">
 								<div class="activity-title-wrap">
-									<h5 class="activity-title underline-two"><a href={'javascript:void(0)'}>Kecak Dance</a></h5>
+									<h5 class="activity-title underline-two">
+										<a href={'javascript:void(0)'}>Kecak Dance</a>
+									</h5>
 								</div>
 							</div>
 						</div>
@@ -742,11 +758,15 @@
 			<div class="col-xl-3 col-lg-6 col-md-12">
 				<div class="activity-wrapper activity-style-two">
 					<div class="activity-thumb image-overly">
-						<a href={'javascript:void(0)'}><img src="assets/images/activity/atv.png" alt="ATV Ride in Bali" /></a>
+						<a href={'javascript:void(0)'}
+							><img src="assets/images/activity/atv.png" alt="ATV Ride in Bali" /></a
+						>
 					</div>
 					<div class="activity-content">
 						<div class="activity-title-wrap">
-							<h5 class="activity-title underline-two"><a href={'javascript:void(0)'}>ATV Ride</a></h5>
+							<h5 class="activity-title underline-two">
+								<a href={'javascript:void(0)'}>ATV Ride</a>
+							</h5>
 						</div>
 					</div>
 				</div>
@@ -838,7 +858,6 @@
 									aria-describedby="basic-addon1"
 									required
 									bind:value={duration}
-
 								/>
 							</div>
 						</div>
@@ -857,7 +876,6 @@
 									class="nice-select input-box-select"
 									name="travel_month"
 									bind:value={travel_month}
-
 									id="service"
 									required
 								>
@@ -890,7 +908,6 @@
 										class="nice-select input-box-select"
 										name="travel_type"
 										bind:value={travel_type}
-
 										id="service"
 										required
 									>
@@ -917,9 +934,13 @@
 									>
 								</div>
 								<div class="input-box-select">
-									<select class="nice-select input-box-select" name="diet_preference" id="service"
-													bind:value={diet_preference}
-													required>
+									<select
+										class="nice-select input-box-select"
+										name="diet_preference"
+										id="service"
+										bind:value={diet_preference}
+										required
+									>
 										<option value="">Select Your Diet Preference</option>
 										<option value="halal">Halal Food</option>
 										<option value="pork">I Love Pork</option>
@@ -941,7 +962,6 @@
 									name="travel_plan"
 									placeholder="Tell us about your holidays plan..."
 									bind:value={travel_plan}
-
 									required
 								></textarea>
 							</div>
@@ -961,7 +981,6 @@
 										placeholder="Type your name"
 										required
 										bind:value={name}
-
 									/>
 								</div>
 							</div>
@@ -979,7 +998,6 @@
 										placeholder="Type your email"
 										required
 										bind:value={email}
-
 									/>
 								</div>
 							</div>
@@ -997,7 +1015,6 @@
 										placeholder="Your whatsapp with country code"
 										required
 										bind:value={whatsapp}
-
 									/>
 								</div>
 							</div>
@@ -1006,7 +1023,7 @@
 					<div class="row mt-4">
 						<div class="col-md-12 d-flex justify-content-center">
 							<div class="col-lg-2">
-								<button  type="submit" class="bd-primary-btn btn-style has-arrow is-bg radius-60">
+								<button type="submit" class="bd-primary-btn btn-style has-arrow is-bg radius-60">
 									<span class="bd-primary-btn-arrow arrow-right"
 										><i class="fa-regular fa-arrow-right"></i></span
 									>
@@ -1050,7 +1067,7 @@
 								<div class="testimonial-avatar flex-wrap">
 									<div class="testimonial-avatar-wrap">
 										<div class="avatar-thumb">
-											<img src="{testimonial.picture}" alt="" />
+											<img src={testimonial.picture} alt="" />
 										</div>
 										<div class="avatar-meta">
 											<h6 class="avatar-meta-title">{testimonial.name}</h6>
@@ -1075,7 +1092,7 @@
 							</div>
 						</div>
 					</div>
-					{/each}
+				{/each}
 			</div>
 			<div class="slider-pagination-wrapper">
 				<div class="slider-pagination bd-pagination mt-50 justify-content-center"></div>
