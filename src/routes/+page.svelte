@@ -1,4 +1,6 @@
 <script lang="ts">
+	import SvelteSeo from "svelte-seo";
+
 	let adult_visitor = '';
 	let children_visitor = '';
 	let duration = '';
@@ -234,20 +236,31 @@
 		window.open(whatsappLink);
 	}
 </script>
-
-<svelte:head>
-	<title>Namaste Bali Trans - Your Trusted Partner for Transportation Services in Bali</title>
-	<meta name="description" content="Namaste Bali Trans offers reliable transportation services in Bali, including airport transfers, tours, and more. Book your hassle-free travel experience with us today!" />
-	<meta property="og:title" content="Namaste Bali Trans - Your Trusted Partner for Transportation Services in Bali" />
-	<meta property="og:description" content="Namaste Bali Trans offers reliable transportation services in Bali, including airport transfers, tours, and more. Book your hassle-free travel experience with us today!" />
-	<meta property="og:url" content="https://namastebalitrans.com" />
-	<meta property="og:type" content="website" />
-	<meta property="og:image" content="https://namastebalitrans.com/og-image.jpg" />
-	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content="Namaste Bali Trans - Your Trusted Partner for Transportation Services in Bali" />
-	<meta name="twitter:description" content="Namaste Bali Trans offers reliable transportation services in Bali, including airport transfers, tours, and more. Book your hassle-free travel experience with us today!" />
-	<meta name="twitter:image" content="https://namastebalitrans.com/twitter-image.jpg" />
-</svelte:head>
+<SvelteSeo
+	title="Namaste Bali Trans - Your Trusted Partner for Transportation Services in Bali"
+	description="Namaste Bali Trans offers reliable transportation services in Bali, including airport transfers, tours, and more. Book your hassle-free travel experience with us today!"
+	keywords="transportation, Bali, airport transfers, tours, travel"
+	openGraph={{
+            title: "Namaste Bali Trans - Your Trusted Partner for Transportation Services in Bali",
+            description: "Namaste Bali Trans offers reliable transportation services in Bali, including airport transfers, tours, and more. Book your hassle-free travel experience with us today!",
+            url: "https://namastebalitrans.com",
+            type: "website",
+            images: [
+                {
+                    url: "https://namastebalitrans.com/og-image.jpg",
+                    width: 1200,
+                    height: 630,
+                },
+            ],
+            site_name: "Namaste Bali Trans",
+        }}
+	twitter={{
+            card: "summary_large_image",
+            title: "Namaste Bali Trans - Your Trusted Partner for Transportation Services in Bali",
+            description: "Namaste Bali Trans offers reliable transportation services in Bali, including airport transfers, tours, and more. Book your hassle-free travel experience with us today!",
+            image: "https://namastebalitrans.com/twitter-image.jpg",
+        }}
+/>
 
 <!-- Banner area start -->
 <section class="bd-banner-area banner-style-two banner-slider-mask">
