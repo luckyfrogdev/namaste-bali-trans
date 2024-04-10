@@ -55,18 +55,18 @@
 </script>
 
 <body>
-	<!-- preloader start -->
-	<!--	<div class="loader" id="preloader">-->
-	<!--		<div class="preloader-wrap">-->
-	<!--			<div class="plane">-->
-	<!--				<img class="plane-img" src="assets/images/loader/loader-plane.png" alt="" />-->
-	<!--			</div>-->
-	<!--			<div class="earth-wrapper">-->
-	<!--				<div class="earth" data-background="assets/images/loader/earth.gif"></div>-->
-	<!--			</div>-->
-	<!--		</div>-->
-	<!--	</div>-->
-	<!-- preloader end -->
+	<!--	 preloader start -->
+	<div class="loader" id="preloader">
+		<div class="preloader-wrap">
+			<div class="plane">
+				<img class="plane-img" src="assets/images/loader/loader-plane.png" alt="" />
+			</div>
+			<div class="earth-wrapper">
+				<div class="earth" data-background="assets/images/loader/earth.gif"></div>
+			</div>
+		</div>
+	</div>
+	<!--	 preloader end -->
 
 	<!-- Offcanvas area start -->
 	<div class="fix">
@@ -75,7 +75,7 @@
 				<div class="offcanvas-content">
 					<div class="offcanvas-top d-flex justify-content-between align-items-center mb-25">
 						<div class="offcanvas-logo">
-							<a href="{'javascript:void(0)'}">
+							<a href={'javascript:void(0)'}>
 								<img src="assets/images/logo/logo-black.png" alt="logo not found" />
 							</a>
 						</div>
@@ -106,27 +106,42 @@
 						<ul>
 							<li class="d-flex align-items-center gap-10">
 								<div class="offcanvas-contact-icon">
-									<a target="_blank" href={'javascript:void(0)'}> <i class="fal fa-map-marker-alt"></i></a>
+									<a target="_blank" href={'javascript:void(0)'}>
+										<i class="fal fa-map-marker-alt"></i></a
+									>
 								</div>
 								<div class="offcanvas-contact-text">
-									<a target="_blank" href={'javascript:void(0)'}>Br. Palungan Batu, Batuagung, Jembrana
-										Jembrana</a>
+									<a target="_blank" href={'javascript:void(0)'}
+										>Br. Palungan Batu, Batuagung, Jembrana Jembrana</a
+									>
 								</div>
 							</li>
 							<li class="d-flex align-items-center gap-10">
 								<div class="offcanvas-contact-icon">
-									<a href="https://wa.me/6283892565216?text=Hello, i want to know the price of your travel"><i class="far fa-phone"></i></a>
+									<a
+										href="https://wa.me/6283892565216?text=Hello, i want to know the price of your travel"
+										><i class="far fa-phone"></i></a
+									>
 								</div>
 								<div class="offcanvas-contact-text">
-									<a href="https://wa.me/6283892565216?text=Hello, i want to know the price of your travel">+62-838-9256-5216 (Gung Dwi)</a>
+									<a
+										href="https://wa.me/6283892565216?text=Hello, i want to know the price of your travel"
+										>+62-838-9256-5216 (Gung Dwi)</a
+									>
 								</div>
 							</li>
 							<li class="d-flex align-items-center gap-10">
 								<div class="offcanvas-contact-icon">
-									<a href="https://wa.me/6283114998908?text=Hello, i want to know the price of your travel"><i class="far fa-phone"></i></a>
+									<a
+										href="https://wa.me/6283114998908?text=Hello, i want to know the price of your travel"
+										><i class="far fa-phone"></i></a
+									>
 								</div>
 								<div class="offcanvas-contact-text">
-									<a href="https://wa.me/6283114998908?text=Hello, i want to know the price of your travel">+62-831-1499-8908(Gus Aji)</a>
+									<a
+										href="https://wa.me/6283114998908?text=Hello, i want to know the price of your travel"
+										>+62-831-1499-8908(Gus Aji)</a
+									>
 								</div>
 							</li>
 						</ul>
@@ -135,7 +150,11 @@
 					<div class="offcanvas-social">
 						<h4 class="offcanvas-title-meta">Let's Connected With Us</h4>
 						<ul>
-							<li><a href="https://web.facebook.com/goes.tillkiss"><i class="fab fa-facebook-f"></i></a></li>
+							<li>
+								<a href="https://web.facebook.com/goes.tillkiss"
+									><i class="fab fa-facebook-f"></i></a
+								>
+							</li>
 						</ul>
 					</div>
 				</div>
@@ -240,14 +259,14 @@
 								<div class="d-flex flex-wrap align-items-center gap--5">
 									<span class="b6">Follow Us:</span>
 									<div class="theme-social">
-										<a href="https://web.facebook.com/goes.tillkiss"><i class="icon-facebook"></i></a>
+										<a href="https://web.facebook.com/goes.tillkiss"
+											><i class="icon-facebook"></i></a
+										>
 									</div>
 								</div>
-
 							</div>
 						</div>
 					</div>
-
 				</div>
 			</div>
 		</div>
