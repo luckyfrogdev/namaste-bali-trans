@@ -10,7 +10,7 @@ const config = {
 
 		// since <link rel="stylesheet"> isn't
 		// allowed, inline all styles
-		inlineStyleThreshold: Infinity,
+		inlineStyleThreshold: Infinity
 	}
 };
 
