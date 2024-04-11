@@ -29,4 +29,4 @@ jobs:
             cd /
             cd /www/wwwroot/namaste-bali-trans
             sudo git pull origin main  # Update your project from GitHub
-            sudo source build.sh
+            source build.sh
