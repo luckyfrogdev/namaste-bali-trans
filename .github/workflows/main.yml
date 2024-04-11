@@ -26,6 +26,7 @@ jobs:
           username: ${{ secrets.VPS_USERNAME }}
           key: ${{ secrets.VPS_SSH_KEY }}
           script: |
+            cd /
             cd /www/wwwroot/namaste-bali-trans
             sudo git pull origin main  # Update your project from GitHub
             sudo source build.sh
