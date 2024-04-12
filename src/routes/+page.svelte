@@ -135,19 +135,23 @@
 			social_media: {
 				facebook:
 					'https://web.facebook.com/profile.php?id=100094701733547&mibextid=LQQJ4d&rdid=BsNriH0mGtCJOfmG',
-				instagram: 'https://www.instagram.com/agungrai49?utm_source=qr'
+				instagram: 'https://www.instagram.com/agungrai49?utm_source=qr',
+				whatsapp: "https://wa.me/6283892565216"
 			}
 		},
 		{
 			id: 2,
-			name: 'Gus Aji',
-			role: 'Tour Guider / Driver',
+			name: 'Ida Bagus Ngurah Swartika',
+			role: 'Owner',
 			image: 'assets/images/team/gus-aji.jpeg',
 			social_media: {
-				facebook: 'https://web.facebook.com/goes.tillkiss'
+				facebook: 'https://web.facebook.com/goes.tillkiss',
+				whatsapp: "https://wa.me/6283114998908"
 			}
 		}
 	];
+	// +62 838-9256-5216(gung Dwi)
+	// 083114998908(Gus aji)
 
 	let testimonials = [
 		{
@@ -1136,7 +1140,7 @@
 			<div class="col-xl-6">
 				<div class="section-title-wrapper anim-wrapper animation-style-3">
 					<span class="section-subtitle mb-10">Our Team</span>
-					<h2 class="section-title title-animation">Tour Guider And Customer Service</h2>
+					<h2 class="section-title title-animation">Our Super Team</h2>
 				</div>
 			</div>
 		</div>
@@ -1168,6 +1172,11 @@
 							{#if team.social_media.instagram}
 								<a class="icon-02" target="_blank" href={team.social_media.instagram}
 									><i class="icon-instagram"></i></a
+								>
+							{/if}
+							{#if team.social_media.whatsapp}
+								<a class="icon-02" target="_blank" href={team.social_media.whatsapp}
+								><i class="icon-call"></i></a
 								>
 							{/if}
 						</div>
