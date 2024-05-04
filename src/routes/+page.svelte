@@ -1,5 +1,7 @@
 <script lang="ts">
 	import SvelteSeo from 'svelte-seo';
+	import axios from '$lib/axios_client';
+	import { onMount } from 'svelte';
 
 	let adult_visitor = '';
 	let children_visitor = '';
@@ -12,92 +14,7 @@
 	let email = '';
 	let whatsapp = '';
 
-	let destinations = [
-		{
-			id: 1,
-			name: 'Lempuyang Temple',
-			image: 'assets/images/tour/lempuyang.png',
-			tagline: "Gateway to the Divine: Mount Lempuyang's Mystical Portal"
-		},
-		{
-			id: 2,
-			name: 'Tirta Gangga',
-			image: 'assets/images/tour/tirta-gangga.png',
-			tagline: 'Tranquil Waters, Serene Sanctuary'
-		},
-		{
-			id: 3,
-			name: 'Ulun Danu Beratan Temple',
-			image: 'assets/images/tour/ulun-danu.png',
-			tagline: "Serenity Upon the Lake's Reflections"
-		},
-		{
-			id: 4,
-			name: 'Tanah Lot Temple',
-			image: 'assets/images/tour/tanah-lot.png',
-			tagline: 'Where Land and Sea Converge in Harmony'
-		},
-		{
-			id: 5,
-			name: 'Kintamani',
-			image: 'assets/images/tour/kintamani.png',
-			tagline: 'Majestic Vistas, Volcanic Wonders'
-		},
-		{
-			id: 6,
-			name: 'Mount Batur',
-			image: 'assets/images/tour/mount-batur.png',
-			tagline: "Ascend to Bali's Sacred Summit"
-		},
-		{
-			id: 7,
-			name: 'Uluwatu Temple',
-			image: 'assets/images/tour/uluwatu.png',
-			tagline: 'Perched on Cliffs, Bathed in Sunsets'
-		},
-		{
-			id: 8,
-			name: 'Ubud Monkey Forest',
-			image: 'assets/images/tour/monkey-forest.png',
-			tagline: 'Where Humans Meet Their Mischievous Cousins'
-		},
-		{
-			id: 9,
-			name: 'Penglipuran Village',
-			image: 'assets/images/tour/penglipuran.png',
-			tagline: 'Timeless Charm, Traditional Elegance'
-		},
-		{
-			id: 10,
-			name: 'Tegalalang Rice Terrace',
-			image: 'assets/images/tour/tegalalang.png',
-			tagline: "Nature's Canvas, Bali's Tapestry"
-		},
-		{
-			id: 11,
-			name: 'Kelingking Beach',
-			image: 'assets/images/tour/kelingking-beach.png',
-			tagline: 'Spectacular Cliff Views, Pristine Sands'
-		},
-		{
-			id: 12,
-			name: "Angel's Billabong",
-			image: 'assets/images/tour/angels-billabong.png',
-			tagline: 'Coastal Wonder, Natural Rock Formation'
-		},
-		{
-			id: 13,
-			name: 'Broken Beach',
-			image: 'assets/images/tour/broken-beach.png',
-			tagline: "Nature's Amphitheater, Majestic Beauty"
-		},
-		{
-			id: 14,
-			name: 'Crystal Bay Beach',
-			image: 'assets/images/tour/crystal-bay-beach.png',
-			tagline: 'Turquoise Waters, Paradise Found'
-		}
-	];
+	let destinations = [];
 
 	let popular_destinations = [
 		{
@@ -127,31 +44,43 @@
 	];
 
 	let teams = [
-		{
-			id: 1,
-			name: 'Gung Dwi',
-			role: 'Customer Service',
-			image: 'assets/images/team/gung-dwi.jpeg',
-			social_media: {
-				facebook:
-					'https://web.facebook.com/profile.php?id=100094701733547&mibextid=LQQJ4d&rdid=BsNriH0mGtCJOfmG',
-				instagram: 'https://www.instagram.com/agungrai49?utm_source=qr',
-				whatsapp: "https://wa.me/6283892565216"
-			}
-		},
-		{
-			id: 2,
-			name: 'Ida Bagus Ngurah Swartika',
-			role: 'Owner',
-			image: 'assets/images/team/gus-aji.jpeg',
-			social_media: {
-				facebook: 'https://web.facebook.com/goes.tillkiss',
-				whatsapp: "https://wa.me/6283114998908"
-			}
-		}
+
 	];
 	// +62 838-9256-5216(gung Dwi)
 	// 083114998908(Gus aji)
+
+	async function fetchDestinations(){
+		try {
+			const response = await axios.get(
+				`/destinations/list`
+			);
+
+			if (response.status === 200) {
+				destinations = response.data.data;
+			} else {
+				console.error('Error fetching data:', response);
+			}
+		} catch (error) {
+			console.error('Error fetching data:', error);
+		}
+	}
+
+	async function fetchTeams(){
+		try {
+			const response = await axios.get(
+				`/teams/list`
+			);
+
+			if (response.status === 200) {
+				teams = response.data.data;
+			} else {
+				console.error('Error fetching data:', response);
+			}
+		} catch (error) {
+			console.error('Error fetching data:', error);
+		}
+	}
+
 
 	let testimonials = [
 		{
@@ -239,6 +168,14 @@
 		// Open the WhatsApp chat link
 		window.open(whatsappLink);
 	}
+
+	onMount(
+		async () => {
+			await fetchDestinations();
+			await fetchTeams();
+		}
+	);
+
 </script>
 
 <SvelteSeo
@@ -547,13 +484,13 @@
 					<div class="tour-wrapper style-one">
 						<div class="p-relative">
 							<div class="tour-thumb image-overly">
-								<a href={'javascript:void(0)'}><img src={item.image} alt={item.name} /></a>
+								<a href={'javascript:void(0)'}><img src={item.image} alt={item.title} /></a>
 							</div>
 							<div class="tour-meta d-flex align-items-center justify-content-between">
 								<div class="tour-location">
 									<span
 										><a href={'javascript:void(0)'}
-											><i class="fa-regular fa-location-dot"></i> {item.name}</a
+											><i class="fa-regular fa-location-dot"></i> {item.title}</a
 										></span
 									>
 								</div>
@@ -561,7 +498,7 @@
 						</div>
 						<div class="tour-content">
 							<h5 class="tour-title fw-5 underline mb-5">
-								{item.tagline}
+								{item.description}
 							</h5>
 
 							<div class="tour-divider"></div>
@@ -1164,19 +1101,29 @@
 							</div>
 						</div>
 						<div class="team-social">
-							{#if team.social_media.facebook}
-								<a class="icon-01" target="_blank" href={team.social_media.facebook}
+							{#if team.facebook}
+								<a class="icon-01" target="_blank" href={team.facebook}
 									><i class="icon-facebook"></i></a
 								>
 							{/if}
-							{#if team.social_media.instagram}
-								<a class="icon-02" target="_blank" href={team.social_media.instagram}
+							{#if team.instagram}
+								<a class="icon-02" target="_blank" href={team.instagram}
 									><i class="icon-instagram"></i></a
 								>
 							{/if}
-							{#if team.social_media.whatsapp}
-								<a class="icon-02" target="_blank" href={team.social_media.whatsapp}
+							{#if team.whatsapp}
+								<a class="icon-02" target="_blank" href="https://wa.me/{team.whatsapp}"
 								><i class="icon-call"></i></a
+								>
+							{/if}
+							{#if team.tiktok}
+								<a class="icon-02" target="_blank" href={team.tiktok}
+								> <i class="fab fa-tiktok"></i></a
+								>
+							{/if}
+							{#if team.twitter}
+								<a class="icon-02" target="_blank" href={team.twitter}
+								><i class="icon-twitter-x"></i></a
 								>
 							{/if}
 						</div>

@@ -35,6 +35,7 @@
 	"dependencies": {
 		"@sveltejs/adapter-node": "^5.0.1",
 		"@sveltejs/amp": "^1.1.0",
+		"axios": "^1.6.8",
 		"dropcss": "^1.0.16"
 	}
 }
