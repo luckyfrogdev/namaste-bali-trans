@@ -12,12 +12,12 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-
-      - name: Install dependencies
-        run: npm install  # Or whatever command you use to install dependencies
-
-      - name: Build
-        run: npm run build  # Or whatever command you use to build your project
+#
+#      - name: Install dependencies
+#        run: npm install  # Or whatever command you use to install dependencies
+#
+#      - name: Build
+#        run: npm run build  # Or whatever command you use to build your project
 
       - name: Deploy to VPS
         uses: appleboy/ssh-action@master
