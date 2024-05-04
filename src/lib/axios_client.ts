@@ -1,8 +1,7 @@
 // axiosClient.ts
 import axios, { type AxiosInstance, type InternalAxiosRequestConfig } from 'axios';
-import { env } from '$env/dynamic/public';
 
-const BASE_URL = env.PUBLIC_BASE_URL; // Your API base URL
+const BASE_URL = "http://103.172.205.223:8282"; // Your API base URL
 
 const axiosInstance: AxiosInstance = axios.create({
 	baseURL: BASE_URL,
