@@ -1,7 +1,7 @@
 // axiosClient.ts
 import axios, { type AxiosInstance, type InternalAxiosRequestConfig } from 'axios';
 
-const BASE_URL = "http://103.172.205.223:8282"; // Your API base URL
+const BASE_URL = "https://api.namastebalitrans.com"; // Your API base URL
 
 const axiosInstance: AxiosInstance = axios.create({
 	baseURL: BASE_URL,
