@@ -112,7 +112,7 @@
 								</div>
 								<div class="offcanvas-contact-text">
 									<a target="_blank" href={'javascript:void(0)'}
-										>Br. Palungan Batu, Batuagung, Jembrana Jembrana</a
+										>Jalan Patih Jelantik Dusun Paluangan Batu, Desa Batuagung, Jembrana 82218</a
 									>
 								</div>
 							</li>
@@ -140,9 +140,24 @@
 								<div class="offcanvas-contact-text">
 									<a
 										href="https://wa.me/6283114998908?text=Hello, i want to know the price of your travel"
-										>+62-831-1499-8908(Gus Aji)</a
+										>+62-831-1499-8908 (Gus Aji)</a
 									>
 								</div>
+
+							</li><li class="d-flex align-items-center gap-10">
+								<div class="offcanvas-contact-icon">
+									<a
+										href="https://wa.me/6283114998908?text=Hello, i want to know the price of your travel"
+										><i class="far fa-phone"></i></a
+									>
+								</div>
+								<div class="offcanvas-contact-text">
+									<a
+										href="https://wa.me/6285737159915?text=Hello, i want to know the price of your travel"
+										>+62-857-3715-9915 (Admin)</a
+									>
+								</div>
+
 							</li>
 						</ul>
 					</div>
@@ -279,6 +294,11 @@
 								Copyright @ {new Date().getFullYear()}
 								<a href={'javascript:void(0)'} target="_blank">Namaste Bali Trans</a> . All Right Reserved
 							</p>
+						</div>
+					</div>
+					<div class="col-xl-3 col-lg-5 col-md-6 col-12">
+						<div class="footer-card">
+							<img src="assets/images/icons/payment-option-black-new.png" alt="">
 						</div>
 					</div>
 				</div>
