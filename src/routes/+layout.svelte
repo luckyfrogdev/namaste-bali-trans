@@ -147,7 +147,7 @@
 							</li><li class="d-flex align-items-center gap-10">
 								<div class="offcanvas-contact-icon">
 									<a
-										href="https://wa.me/6283114998908?text=Hello, i want to know the price of your travel"
+										href="https://wa.me/6285737159915?text=Hello, i want to know the price of your travel"
 										><i class="far fa-phone"></i></a
 									>
 								</div>
