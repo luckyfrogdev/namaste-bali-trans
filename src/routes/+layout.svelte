@@ -112,7 +112,7 @@
 								</div>
 								<div class="offcanvas-contact-text">
 									<a target="_blank" href={'javascript:void(0)'}
-										>Jalan Patih Jelantik Dusun Paluangan Batu, Desa Batuagung, Jembrana 82218</a
+										>Jalan Patih Jelantik Dusun Palungan Batu, Desa Batuagung, Jembrana 82218</a
 									>
 								</div>
 							</li>
