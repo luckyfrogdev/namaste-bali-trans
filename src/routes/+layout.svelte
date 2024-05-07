@@ -159,6 +159,14 @@
 								</div>
 
 							</li>
+							<li class="d-flex align-items-center gap-10">
+								<div class="offcanvas-contact-icon">
+									<a href="mailto:namastebalitrans99@gmail.com"><i class="fal fa-envelope"></i></a>
+								</div>
+								<div class="offcanvas-contact-text">
+									<a href="mailto:namastebalitrans99@gmail.com">namastebalitrans99@gmail.com (Email)</a>
+								</div>
+							</li>
 						</ul>
 					</div>
 
