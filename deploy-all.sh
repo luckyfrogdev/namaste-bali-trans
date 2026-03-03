@@ -131,15 +131,28 @@ if $DEPLOY_API; then
         echo -e "${RED}✗ Deployment failed during build/start!${NC}"
         exit 1
     fi
-    sleep 5 # give it an extra few seconds for seed
-
     if $SEED_API; then
-        echo -e "\n${YELLOW}[+] Seeding Database and Storage...${NC}"
-        docker exec $MONGO_CONTAINER mongoimport -u root -p root --authenticationDatabase admin --db namaste_bali --collection destinations --file /data/db/namaste_bali.destinations.json --jsonArray --drop
-        docker exec $MONGO_CONTAINER mongoimport -u root -p root --authenticationDatabase admin --db namaste_bali --collection teams --file /data/db/namaste_bali.teams.json --jsonArray --drop
-        docker exec $MONGO_CONTAINER mongoimport -u root -p root --authenticationDatabase admin --db namaste_bali --collection users --file /data/db/namaste_bali.users.json --jsonArray --drop
+        echo -e "\n${YELLOW}[+] Waiting for MongoDB to be ready...${NC}"
+        RETRIES=0
+        MAX_RETRIES=30
+        until docker exec $MONGO_CONTAINER mongosh --eval "db.adminCommand('ping')" -u root -p root --authenticationDatabase admin &> /dev/null; do
+            RETRIES=$((RETRIES + 1))
+            if [ $RETRIES -ge $MAX_RETRIES ]; then
+                echo -e "${RED}✗ MongoDB did not become ready in time. Aborting seed.${NC}"
+                exit 1
+            fi
+            echo -e "  Waiting for MongoDB... ($RETRIES/$MAX_RETRIES)"
+            sleep 2
+        done
+        echo -e "${GREEN}✓ MongoDB is ready!${NC}"
+
+        echo -e "\n${YELLOW}[+] Seeding Database...${NC}"
+        docker exec $MONGO_CONTAINER mongoimport -u root -p root --authenticationDatabase admin --db namaste_bali --collection destinations --file /seed/namaste_bali.destinations.json --jsonArray --drop
+        docker exec $MONGO_CONTAINER mongoimport -u root -p root --authenticationDatabase admin --db namaste_bali --collection teams --file /seed/namaste_bali.teams.json --jsonArray --drop
+        docker exec $MONGO_CONTAINER mongoimport -u root -p root --authenticationDatabase admin --db namaste_bali --collection users --file /seed/namaste_bali.users.json --jsonArray --drop
         echo -e "${GREEN}✓ MongoDB Seeded!${NC}"
-        
+
+        echo -e "\n${YELLOW}[+] Uploading images to MinIO...${NC}"
         docker exec $API_CONTAINER python seed_minio.py
         echo -e "${GREEN}✓ MinIO Seeded!${NC}"
     fi
