@@ -20,9 +20,9 @@
 set -e
 
 # ── VPS Project Paths (adjust if needed) ──────────────────────────────────────
-API_DIR="/www/wwwroot/namaste_bali_panel_api"
-FRONTEND_DIR="/www/wwwroot/namaste_bali_trans"
-PANEL_DIR="/www/wwwroot/namaste_bali_panel"
+API_DIR="/var/www/wwwroot/namaste_bali_panel_api"
+FRONTEND_DIR="/var/www/wwwroot/namaste_bali_trans"
+PANEL_DIR="/var/www/wwwroot/namaste_bali_panel"
 
 # ── Container / Image Names ──────────────────────────────────────────────────
 API_CONTAINER="namaste_bali_panel_api"
