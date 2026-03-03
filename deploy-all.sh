@@ -134,7 +134,7 @@ if $DEPLOY_API; then
     # Wait for MongoDB to be ready
     echo -e "\n${YELLOW}Waiting for MongoDB to be ready...${NC}"
     RETRIES=30
-    until docker exec $MONGO_CONTAINER mongosh --quiet --eval "db.runCommand({ ping: 1 })" --username root --password root --authenticationDatabase admin &> /dev/null; do
+    until docker exec $MONGO_CONTAINER mongosh -u root -p root --authenticationDatabase admin --eval "quit(0)" &> /dev/null; do
         RETRIES=$((RETRIES - 1))
         if [ $RETRIES -eq 0 ]; then
             echo -e "${RED}✗ MongoDB did not become ready in time. Aborting.${NC}"
