@@ -24,6 +24,49 @@ RED='\033[0;31m'
 CYAN='\033[0;36m'
 NC='\033[0m'
 
+# ── Check & Install Prerequisites ─────────────────────────────────────────────
+echo -e "${YELLOW}[0] Checking prerequisites...${NC}"
+
+# Docker
+if ! command -v docker &> /dev/null; then
+    echo -e "${YELLOW}Docker not found. Installing...${NC}"
+    apt update -y
+    apt install -y docker.io
+    systemctl enable docker
+    systemctl start docker
+    echo -e "${GREEN}✓ Docker installed.${NC}"
+else
+    echo -e "${GREEN}✓ Docker found: $(docker --version)${NC}"
+fi
+
+# Docker Compose (v2 plugin)
+if ! docker compose version &> /dev/null; then
+    echo -e "${YELLOW}Docker Compose not found. Installing...${NC}"
+    apt install -y docker-compose-v2
+    echo -e "${GREEN}✓ Docker Compose installed.${NC}"
+else
+    echo -e "${GREEN}✓ Docker Compose found: $(docker compose version --short)${NC}"
+fi
+
+# Node.js & npm
+if ! command -v node &> /dev/null; then
+    echo -e "${YELLOW}Node.js not found. Installing Node.js 22 LTS...${NC}"
+    curl -fsSL https://deb.nodesource.com/setup_22.x | bash -
+    apt install -y nodejs
+    echo -e "${GREEN}✓ Node.js installed: $(node --version)${NC}"
+else
+    echo -e "${GREEN}✓ Node.js found: $(node --version)${NC}"
+fi
+
+if ! command -v npm &> /dev/null; then
+    echo -e "${RED}✗ npm still not found after Node.js install. Aborting.${NC}"
+    exit 1
+else
+    echo -e "${GREEN}✓ npm found: $(npm --version)${NC}"
+fi
+
+echo ""
+
 # Parse args
 DEPLOY_API=false
 DEPLOY_FRONTEND=false
