@@ -21,8 +21,8 @@ set -e
 
 # ── VPS Project Paths (adjust if needed) ──────────────────────────────────────
 API_DIR="/www/wwwroot/namaste_bali_panel_api"
-FRONTEND_DIR="/www/wwwroot/namaste-bali-trans"
-PANEL_DIR="/www/wwwroot/namaste-bali-panel"
+FRONTEND_DIR="/www/wwwroot/namaste_bali_trans"
+PANEL_DIR="/www/wwwroot/namaste_bali_panel"
 
 # ── Container / Image Names ──────────────────────────────────────────────────
 API_CONTAINER="namaste_bali_panel_api"
@@ -140,38 +140,45 @@ if $DEPLOY_API; then
     else
         cd "$API_DIR"
 
-        print_step "Pulling latest code..."
+        print_step "Checking for updates..."
+        LOCAL_COMMIT=$(sudo git rev-parse HEAD)
         sudo git pull origin main
+        REMOTE_COMMIT=$(sudo git rev-parse HEAD)
 
-        print_step "Starting Docker Compose services (API, Mongo, MinIO)..."
-        sudo docker compose down
-        sudo docker compose up -d --build
-
-        # Wait for services to be ready
-        print_step "Waiting for API to be ready..."
-        sleep 5
-
-        if sudo docker ps --format '{{.Names}}' | grep -q "^${API_CONTAINER}$"; then
-            print_success "API and services deployed successfully!"
-            API_STATUS="success"
-            
-            if $SEED_API; then
-                print_header "Seeding Database and Storage"
-                
-                print_step "Seeding MongoDB Collections..."
-                sudo docker exec $MONGO_CONTAINER mongoimport -u root -p root --authenticationDatabase admin --db namaste_bali --collection destinations --file /data/db/namaste_bali.destinations.json --jsonArray --drop
-                sudo docker exec $MONGO_CONTAINER mongoimport -u root -p root --authenticationDatabase admin --db namaste_bali --collection teams --file /data/db/namaste_bali.teams.json --jsonArray --drop
-                sudo docker exec $MONGO_CONTAINER mongoimport -u root -p root --authenticationDatabase admin --db namaste_bali --collection users --file /data/db/namaste_bali.users.json --jsonArray --drop
-                print_success "MongoDB Seeded!"
-                
-                print_step "Uploading local images to MinIO..."
-                sudo docker exec $API_CONTAINER python seed_minio.py
-                print_success "MinIO Seeded!"
-            fi
-            
+        if [ "$LOCAL_COMMIT" = "$REMOTE_COMMIT" ] && [ "$SEED_API" = false ]; then
+            print_warning "No new commits. Skipping API deployment."
+            API_STATUS="skipped (up to date)"
         else
-            print_error "API container failed to start!"
-            API_STATUS="failed"
+            print_step "Starting Docker Compose services (API, Mongo, MinIO)..."
+            sudo docker compose down
+            sudo docker compose up -d --build
+
+            # Wait for services to be ready
+            print_step "Waiting for API to be ready..."
+            sleep 5
+
+            if sudo docker ps --format '{{.Names}}' | grep -q "^${API_CONTAINER}$"; then
+                print_success "API and services deployed successfully!"
+                API_STATUS="success"
+                
+                if $SEED_API; then
+                    print_header "Seeding Database and Storage"
+                    
+                    print_step "Seeding MongoDB Collections..."
+                    sudo docker exec $MONGO_CONTAINER mongoimport -u root -p root --authenticationDatabase admin --db namaste_bali --collection destinations --file /data/db/namaste_bali.destinations.json --jsonArray --drop
+                    sudo docker exec $MONGO_CONTAINER mongoimport -u root -p root --authenticationDatabase admin --db namaste_bali --collection teams --file /data/db/namaste_bali.teams.json --jsonArray --drop
+                    sudo docker exec $MONGO_CONTAINER mongoimport -u root -p root --authenticationDatabase admin --db namaste_bali --collection users --file /data/db/namaste_bali.users.json --jsonArray --drop
+                    print_success "MongoDB Seeded!"
+                    
+                    print_step "Uploading local images to MinIO..."
+                    sudo docker exec $API_CONTAINER python seed_minio.py
+                    print_success "MinIO Seeded!"
+                fi
+                
+            else
+                print_error "API container failed to start!"
+                API_STATUS="failed"
+            fi
         fi
     fi
 fi
@@ -188,24 +195,31 @@ if $DEPLOY_FRONTEND; then
     else
         cd "$FRONTEND_DIR"
 
-        print_step "Pulling latest code..."
+        print_step "Checking for updates..."
+        LOCAL_COMMIT=$(sudo git rev-parse HEAD)
         sudo git pull origin main
+        REMOTE_COMMIT=$(sudo git rev-parse HEAD)
 
-        print_step "Installing npm dependencies..."
-        sudo npm install
-
-        print_step "Building Svelte app..."
-        sudo npm run build
-
-        deploy_docker_container "$FRONTEND_CONTAINER" \
-            "--name $FRONTEND_CONTAINER --env-file .env -p 3000:3000 -d $FRONTEND_CONTAINER"
-
-        if sudo docker ps --format '{{.Names}}' | grep -q "^${FRONTEND_CONTAINER}$"; then
-            print_success "Frontend deployed successfully!"
-            FRONTEND_STATUS="success"
+        if [ "$LOCAL_COMMIT" = "$REMOTE_COMMIT" ]; then
+            print_warning "No new commits. Skipping Frontend deployment."
+            FRONTEND_STATUS="skipped (up to date)"
         else
-            print_error "Frontend container failed to start!"
-            FRONTEND_STATUS="failed"
+            print_step "Installing npm dependencies..."
+            sudo npm install
+
+            print_step "Building Svelte app..."
+            sudo npm run build
+
+            deploy_docker_container "$FRONTEND_CONTAINER" \
+                "--name $FRONTEND_CONTAINER --env-file .env -p 3000:3000 -d $FRONTEND_CONTAINER"
+
+            if sudo docker ps --format '{{.Names}}' | grep -q "^${FRONTEND_CONTAINER}$"; then
+                print_success "Frontend deployed successfully!"
+                FRONTEND_STATUS="success"
+            else
+                print_error "Frontend container failed to start!"
+                FRONTEND_STATUS="failed"
+            fi
         fi
     fi
 fi
@@ -222,24 +236,31 @@ if $DEPLOY_PANEL; then
     else
         cd "$PANEL_DIR"
 
-        print_step "Pulling latest code..."
+        print_step "Checking for updates..."
+        LOCAL_COMMIT=$(sudo git rev-parse HEAD)
         sudo git pull origin main
+        REMOTE_COMMIT=$(sudo git rev-parse HEAD)
 
-        print_step "Installing npm dependencies..."
-        sudo npm install
-
-        print_step "Building Svelte app..."
-        sudo npm run build
-
-        deploy_docker_container "$PANEL_CONTAINER" \
-            "--name $PANEL_CONTAINER --env-file .env -p 3001:3001 -d $PANEL_CONTAINER"
-
-        if sudo docker ps --format '{{.Names}}' | grep -q "^${PANEL_CONTAINER}$"; then
-            print_success "Panel deployed successfully!"
-            PANEL_STATUS="success"
+        if [ "$LOCAL_COMMIT" = "$REMOTE_COMMIT" ]; then
+            print_warning "No new commits. Skipping Panel deployment."
+            PANEL_STATUS="skipped (up to date)"
         else
-            print_error "Panel container failed to start!"
-            PANEL_STATUS="failed"
+            print_step "Installing npm dependencies..."
+            sudo npm install
+
+            print_step "Building Svelte app..."
+            sudo npm run build
+
+            deploy_docker_container "$PANEL_CONTAINER" \
+                "--name $PANEL_CONTAINER --env-file .env -p 3001:3001 -d $PANEL_CONTAINER"
+
+            if sudo docker ps --format '{{.Names}}' | grep -q "^${PANEL_CONTAINER}$"; then
+                print_success "Panel deployed successfully!"
+                PANEL_STATUS="success"
+            else
+                print_error "Panel container failed to start!"
+                PANEL_STATUS="failed"
+            fi
         fi
     fi
 fi
@@ -254,15 +275,16 @@ format_status() {
         success) echo -e "${GREEN}✔ SUCCESS${NC}" ;;
         failed)  echo -e "${RED}✖ FAILED${NC}" ;;
         skipped) echo -e "${YELLOW}— SKIPPED${NC}" ;;
+        "skipped (up to date)") echo -e "${YELLOW}— SKIPPED (Up to date)${NC}" ;;
     esac
 }
 
-echo -e "  API      (port 8282) : $(format_status $API_STATUS)"
-echo -e "  Frontend (port 3000) : $(format_status $FRONTEND_STATUS)"
-echo -e "  Panel    (port 3001) : $(format_status $PANEL_STATUS)"
+echo -e "  API      (port 8282) : $(format_status "$API_STATUS")"
+echo -e "  Frontend (port 3000) : $(format_status "$FRONTEND_STATUS")"
+echo -e "  Panel    (port 3001) : $(format_status "$PANEL_STATUS")"
 echo ""
 
-# Exit with error if any deployment failed
+# Exit with error if any deployment failed physically
 if [ "$API_STATUS" = "failed" ] || [ "$FRONTEND_STATUS" = "failed" ] || [ "$PANEL_STATUS" = "failed" ]; then
     print_error "One or more deployments failed. Check the logs above."
     exit 1

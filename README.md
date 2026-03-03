@@ -39,7 +39,7 @@ Run the script from the terminal on your VPS:
 | `--api` | Deploys only the Python API. |
 | `--frontend` | Deploys only the Svelte frontend. |
 | `--panel` | Deploys only the Svelte admin panel. |
-| `--seed` | Deploys only the Python API, drops existing data, imports the seed JSON into MongoDB, and uploads the default images into the MinIO bucket. |
+| `--seed` | Deploys only the Python API, drops existing data, imports the seed JSON into MongoDB, and uploads the default images into the MinIO bucket. This command will **force** an API rebuild even if there are no new commits. |
 | `--help` / `-h` | Shows the help message. |
 
 *Note: You can combine flags, successfully deploying just the API and the Panel by running `./deploy-all.sh --api --panel`.*
@@ -50,10 +50,12 @@ Run the script from the terminal on your VPS:
 
 Under the hood, the script:
 1. Navigates to the respective project directory on the VPS.
-2. Pulls the latest code using `git pull origin main`.
-3. (For Svelte apps): the script runs `npm install` and `npm run build`.
-4. Uses Docker to build a fresh image and recreate the container serving that project.
-5. In the case of `--seed`, it executes `mongoimport` directly in the database container and runs the `seed_minio.py` bulk-upload script.
+2. Checks the current local commit hash.
+3. Pulls the latest code using `git pull origin main`.
+4. Checks the new commit hash. **If the hash hasn't changed, the script intelligently skips the rebuild process for that project to save time.**
+5. (For Svelte apps): the script runs `npm install` and `npm run build`.
+6. Uses Docker to build a fresh image and recreate the container serving that project.
+7. In the case of `--seed`, it executes `mongoimport` directly in the database container and runs the `seed_minio.py` bulk-upload script.
 
 ## ⚠️ Prerequisites
 
