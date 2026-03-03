@@ -14,6 +14,7 @@
 #   ./deploy-all.sh --frontend   # Deploy only the frontend
 #   ./deploy-all.sh --panel      # Deploy only the panel
 #   ./deploy-all.sh --api --panel # Deploy API and panel only
+#   ./deploy-all.sh --seed       # Deploy API with MongoDB and MinIO seeding
 # ==============================================================================
 
 set -e
@@ -25,6 +26,7 @@ PANEL_DIR="/www/wwwroot/namaste-bali-panel"
 
 # ── Container / Image Names ──────────────────────────────────────────────────
 API_CONTAINER="namaste_bali_panel_api"
+MONGO_CONTAINER="namaste_bali_mongo"
 FRONTEND_CONTAINER="namaste_bali_trans"
 PANEL_CONTAINER="namaste_bali_panel"
 
@@ -71,12 +73,14 @@ DEPLOY_API=false
 DEPLOY_FRONTEND=false
 DEPLOY_PANEL=false
 DEPLOY_ALL=true
+SEED_API=false
 
 for arg in "$@"; do
     case $arg in
         --api)       DEPLOY_API=true;      DEPLOY_ALL=false ;;
         --frontend)  DEPLOY_FRONTEND=true; DEPLOY_ALL=false ;;
         --panel)     DEPLOY_PANEL=true;    DEPLOY_ALL=false ;;
+        --seed)      SEED_API=true;        DEPLOY_API=true; DEPLOY_ALL=false ;;
         --help|-h)
             echo "Usage: ./deploy-all.sh [OPTIONS]"
             echo ""
@@ -84,6 +88,7 @@ for arg in "$@"; do
             echo "  --api        Deploy only the Python API"
             echo "  --frontend   Deploy only the Svelte frontend"
             echo "  --panel      Deploy only the Svelte panel"
+            echo "  --seed       Deploy only the Python API, seed MongoDB and upload images to MinIO"
             echo "  --help, -h   Show this help message"
             echo ""
             echo "If no options are specified, all projects will be deployed."
@@ -113,11 +118,14 @@ deploy_docker_container() {
         sudo docker stop "$container_name" && sudo docker rm "$container_name"
     fi
 
-    print_step "Building Docker image: ${container_name}"
-    sudo docker build -t "$container_name" .
+    # API container is handled differently due to docker-compose
+    if [ "$container_name" != "$API_CONTAINER" ]; then
+        print_step "Building Docker image: ${container_name}"
+        sudo docker build -t "$container_name" .
 
-    print_step "Starting container: ${container_name}"
-    eval "sudo docker run $build_args"
+        print_step "Starting container: ${container_name}"
+        eval "sudo docker run $build_args"
+    fi
 }
 
 # ══════════════════════════════════════════════════════════════════════════════
@@ -135,12 +143,32 @@ if $DEPLOY_API; then
         print_step "Pulling latest code..."
         sudo git pull origin main
 
-        deploy_docker_container "$API_CONTAINER" \
-            "-v ./uploads:/app/uploads --name $API_CONTAINER --env-file .env -p 8282:8080 -d $API_CONTAINER"
+        print_step "Starting Docker Compose services (API, Mongo, MinIO)..."
+        sudo docker compose down
+        sudo docker compose up -d --build
+
+        # Wait for services to be ready
+        print_step "Waiting for API to be ready..."
+        sleep 5
 
         if sudo docker ps --format '{{.Names}}' | grep -q "^${API_CONTAINER}$"; then
-            print_success "API deployed successfully!"
+            print_success "API and services deployed successfully!"
             API_STATUS="success"
+            
+            if $SEED_API; then
+                print_header "Seeding Database and Storage"
+                
+                print_step "Seeding MongoDB Collections..."
+                sudo docker exec $MONGO_CONTAINER mongoimport -u root -p root --authenticationDatabase admin --db namaste_bali --collection destinations --file /data/db/namaste_bali.destinations.json --jsonArray --drop
+                sudo docker exec $MONGO_CONTAINER mongoimport -u root -p root --authenticationDatabase admin --db namaste_bali --collection teams --file /data/db/namaste_bali.teams.json --jsonArray --drop
+                sudo docker exec $MONGO_CONTAINER mongoimport -u root -p root --authenticationDatabase admin --db namaste_bali --collection users --file /data/db/namaste_bali.users.json --jsonArray --drop
+                print_success "MongoDB Seeded!"
+                
+                print_step "Uploading local images to MinIO..."
+                sudo docker exec $API_CONTAINER python seed_minio.py
+                print_success "MinIO Seeded!"
+            fi
+            
         else
             print_error "API container failed to start!"
             API_STATUS="failed"
